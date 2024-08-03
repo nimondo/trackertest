@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-lg-6 col-xl-6 table-responsive">
+      <h1>Package List</h1>
+      <table class="table" style="margin-top: 10px">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">description</th>
+            <th scope="col">Weight</th>
+            <th scope="col">height</th>
+            <th scope="col">width</th>
+            <th scope="col">depth</th>
+            <th scope="col">from_name</th>
+            <th scope="col">from_address</th>
+            <th scope="col">from_location</th>
+            <th scope="col">to_name</th>
+            <th scope="col">to_address</th>
+            <th scope="col">to_location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let package of packages">
+            <th scope="row">{{ package._id }}</th>
+            <td>{{ package.description }}</td>
+            <td>{{ package.weight }}</td>
+            <td>{{ package.height }}</td>
+            <td>{{ package.width }}</td>
+            <td>{{ package.depth }}</td>
+            <td>{{ package.from_name }}</td>
+            <td>{{ package.from_address }}</td>
+            <td>
+              lat:{{ package.from_location.lat }}, long:{{
+                package.from_location.long
+              }}
+            </td>
+            <td>{{ package.to_name }}</td>
+            <td>{{ package.to_address }}</td>
+            <td>
+              lat:{{ package.to_location.lat }}, long:{{
+                package.to_location.long
+              }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Pagination -->
+      <nav class="pagination justify-content-center">
+        <app-paginator
+          [totalItems]="totalItems"
+          [pageSize]="pageSize"
+          (pageChanged)="onPageChanged($event)"
+        >
+        </app-paginator>
+      </nav>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-6">
+      <div class="d-flex justify-content-center mt-5">
+        <a routerLink="/package" class="btn view_more_btn"> Create package </a>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-8 col-lg-6 col-xl-6 table-responsive">
+      <h1>Delivery List</h1>
+      <table class="table" style="margin-top: 10px">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">location</th>
+            <!--
+            <th scope="col">pickup_time</th>
+            <th scope="col">start_time</th>
+                        <th scope="col">end_time</th>
+            -->
+            <th scope="col">status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let delivery of deliveries">
+            <th scope="row">{{ delivery._id }}</th>
+            <td>
+              lat:{{ delivery.location.lat }}, long:{{ delivery.location.long }}
+            </td>
+            <td>{{ delivery.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Pagination -->
+      <nav class="pagination justify-content-center">
+        <app-paginator
+          [totalItems]="totalItemsDelivery"
+          [pageSize]="pageSizeDelivery"
+          (pageChanged)="onPageChangedDelivery($event)"
+        >
+        </app-paginator>
+      </nav>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-6">
+      <div class="d-flex justify-content-center mt-5">
+        <a routerLink="/delivery" class="btn view_more_btn">
+          Create delivery
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

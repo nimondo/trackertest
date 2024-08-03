@@ -1,0 +1,497 @@
+2024-07-31T00:33:04.368Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:33:36.409Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:33:54.930Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:34:33.567Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:35:29.805Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:54:17.031Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:55:29.882Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:55:48.066Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T12:56:50.556Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:40:27.678Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:40:29.497Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:41:12.554Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:41:14.539Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:41:28.993Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:48:02.575Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T13:48:20.938Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:06:48.138Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:06:59.924Z [[32minfo[39m]: GET /api
+2024-07-31T17:07:00.310Z [[32minfo[39m]: GET /favicon.ico
+2024-07-31T17:07:08.444Z [[32minfo[39m]: GET /api/documentation
+2024-07-31T17:07:14.739Z [[32minfo[39m]: GET /api-docs
+2024-07-31T17:07:14.752Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:07:14.810Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:07:14.815Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:07:14.819Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:07:14.823Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:07:15.160Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:07:33.364Z [[32minfo[39m]: POST /api/auth/signup
+2024-07-31T17:07:33.467Z [[32minfo[39m]: User created successfully
+2024-07-31T17:09:38.398Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:09:49.382Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:09:52.228Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:09:52.281Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:09:52.287Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:09:52.290Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:09:52.291Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:09:52.641Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:10:08.069Z [[32minfo[39m]: POST /api/auth/signup
+2024-07-31T17:10:08.070Z [[33mwarn[39m]: Invalid email format: test
+2024-07-31T17:10:22.158Z [[32minfo[39m]: POST /api/auth/signup
+2024-07-31T17:10:22.271Z [[32minfo[39m]: User created successfully
+2024-07-31T17:10:39.653Z [[32minfo[39m]: POST /api/auth/signup
+2024-07-31T17:10:39.744Z [[31merror[39m]: 500 - User validation failed: role: `adminr` is not a valid enum value for path `role`.
+2024-07-31T17:10:48.420Z [[32minfo[39m]: POST /api/auth/signup
+2024-07-31T17:10:48.508Z [[32minfo[39m]: User created successfully
+2024-07-31T17:11:47.681Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:11:49.559Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:11:49.616Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:11:49.620Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:11:49.622Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:11:49.627Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:11:49.980Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:12:00.796Z [[32minfo[39m]: POST /api/auth/signup
+2024-07-31T17:12:00.809Z [[33mwarn[39m]: User with email admin@test.com already exists
+2024-07-31T17:12:31.784Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:14:44.811Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:14:51.566Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:15:01.899Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:15:01.951Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:15:01.955Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:15:01.957Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:15:01.963Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:15:02.317Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:15:53.143Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:16:12.733Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:16:13.820Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:16:13.872Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:16:13.876Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:16:13.878Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:16:13.881Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:16:14.108Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:16:37.774Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:16:41.310Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:16:41.368Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:16:41.371Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:16:41.373Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:16:41.377Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:16:41.616Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:17:26.339Z [[32minfo[39m]: POST /api/auth/signin
+2024-07-31T17:17:52.434Z [[32minfo[39m]: POST /api/auth/signin
+2024-07-31T17:18:15.636Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:18:23.609Z [[32minfo[39m]: GET /api-docs/
+2024-07-31T17:18:23.677Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-07-31T17:18:23.682Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-07-31T17:18:23.684Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-07-31T17:18:23.687Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-07-31T17:18:23.991Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-07-31T17:18:37.543Z [[32minfo[39m]: POST /api/auth/login
+2024-07-31T17:18:37.651Z [[32minfo[39m]: User admin@test.com logged in successfully
+2024-07-31T17:22:30.089Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-07-31T17:22:36.568Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:06:22.390Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:06:25.518Z [[32minfo[39m]: GET /api-docs/
+2024-08-01T13:06:25.679Z [[32minfo[39m]: GET /api-docs/swagger-ui.css
+2024-08-01T13:06:25.696Z [[32minfo[39m]: GET /api-docs/swagger-ui-bundle.js
+2024-08-01T13:06:25.705Z [[32minfo[39m]: GET /api-docs/swagger-ui-standalone-preset.js
+2024-08-01T13:06:25.707Z [[32minfo[39m]: GET /api-docs/swagger-ui-init.js
+2024-08-01T13:06:27.521Z [[32minfo[39m]: GET /api-docs/favicon-32x32.png
+2024-08-01T13:11:11.254Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:31:26.688Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:31:40.670Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:31:55.526Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:32:00.289Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:34:08.174Z [[32minfo[39m]: OPTIONS /api/auth/signup
+2024-08-01T13:34:08.206Z [[32minfo[39m]: POST /api/auth/signup
+2024-08-01T13:34:08.333Z [[32minfo[39m]: User created successfully
+2024-08-01T13:34:26.521Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-01T13:34:26.526Z [[32minfo[39m]: POST /api/auth/login
+2024-08-01T13:34:26.615Z [[32minfo[39m]: User admin@admin.co logged in successfully
+2024-08-01T13:34:38.730Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-01T13:34:38.738Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-01T13:34:38.744Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-01T13:34:38.750Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-01T13:34:38.797Z [[32minfo[39m]: Fetched packages
+2024-08-01T13:34:59.425Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-01T13:34:59.431Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-01T13:34:59.439Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-01T13:34:59.448Z [[32minfo[39m]: Fetched packages
+2024-08-01T13:34:59.455Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-01T13:35:31.697Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-01T13:35:31.732Z [[32minfo[39m]: POST /api/auth/login
+2024-08-01T13:35:31.813Z [[32minfo[39m]: User admin@admin.co logged in successfully
+2024-08-01T13:36:05.760Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-01T13:36:05.769Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-01T13:36:05.771Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-01T13:36:05.774Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-01T13:36:05.782Z [[32minfo[39m]: Fetched packages
+2024-08-01T13:36:28.933Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-01T13:36:28.941Z [[32minfo[39m]: POST /api/auth/login
+2024-08-01T13:36:29.011Z [[32minfo[39m]: User admin@admin.co logged in successfully
+2024-08-01T13:47:02.047Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:53:57.397Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:53:59.746Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:54:29.392Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:54:39.435Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:54:58.959Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:55:06.540Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:55:42.977Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:55:48.334Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:58:19.021Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:58:30.094Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:58:38.877Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:59:01.606Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:59:19.178Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:59:25.496Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T13:59:45.419Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T14:00:49.785Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T14:01:18.667Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T14:01:20.059Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:21:23.518Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:21:48.627Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:21:58.304Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:22:21.067Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:22:39.907Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:24:57.628Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:25:44.805Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:26:10.815Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:26:46.052Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:26:57.895Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T15:27:06.517Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T15:27:06.550Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T15:27:06.552Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T15:27:06.561Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T15:27:06.573Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T15:27:06.584Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:24:06.710Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:24:18.589Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:24:30.497Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:24:44.933Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:24:52.679Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:25:10.038Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:25:17.294Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:32:47.678Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:33:18.797Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:33:37.575Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T16:33:37.634Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T16:33:37.874Z [[32m'info'[39m]: User created successfully
+2024-08-01T16:33:37.908Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T16:33:37.911Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T16:33:37.939Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T16:33:37.979Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T16:33:37.996Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T16:33:38.016Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T16:33:38.032Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:36:10.473Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:36:15.020Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:36:34.421Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T16:36:34.515Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T16:36:34.678Z [[32m'info'[39m]: User created successfully
+2024-08-01T16:36:34.706Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T16:36:34.708Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T16:36:34.735Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T16:36:34.764Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T16:36:34.782Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T16:36:34.805Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T16:36:34.823Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:43:48.136Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:44:05.092Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:44:25.954Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T16:44:26.008Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T16:44:26.157Z [[32m'info'[39m]: User created successfully
+2024-08-01T16:44:26.181Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T16:44:26.183Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T16:44:26.205Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T16:44:26.235Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T16:44:26.249Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T16:44:26.265Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T16:44:26.279Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:48:18.982Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:48:32.128Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T16:48:32.189Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T16:48:32.351Z [[32m'info'[39m]: User created successfully
+2024-08-01T16:48:32.378Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T16:48:32.382Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T16:48:32.409Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T16:48:32.441Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T16:48:32.457Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T16:48:32.475Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T16:48:32.489Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:50:04.187Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:51:14.677Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-01T16:51:14.754Z [[32minfo[39m]: POST /api/auth/login
+2024-08-01T16:51:14.976Z [[32minfo[39m]: User admin@admin.co logged in successfully
+2024-08-01T16:51:37.141Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:51:53.864Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-01T16:51:53.918Z [[32minfo[39m]: POST /api/auth/login
+2024-08-01T16:51:54.129Z [[32minfo[39m]: User admin@admin.co logged in successfully
+2024-08-01T16:52:16.841Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:52:26.120Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:52:44.591Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T16:52:44.656Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T16:52:44.818Z [[32m'info'[39m]: User created successfully
+2024-08-01T16:52:44.845Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T16:52:44.847Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T16:52:44.879Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T16:52:44.909Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T16:52:44.927Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T16:52:44.947Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T16:52:44.962Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:56:53.055Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:57:04.552Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T16:57:25.406Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T16:57:25.449Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T16:57:25.610Z [[32m'info'[39m]: User created successfully
+2024-08-01T16:57:25.635Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T16:57:25.637Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T16:57:25.657Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T16:57:25.685Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T16:57:25.701Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T16:57:25.719Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T16:57:25.737Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T16:59:50.014Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:00:38.704Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:00:38.806Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:00:38.983Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:00:39.013Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T17:00:39.016Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T17:00:39.044Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T17:00:39.079Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T17:00:39.096Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T17:00:39.117Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T17:00:39.133Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T17:02:12.061Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:02:25.202Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:02:25.252Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:02:25.387Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:02:25.409Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T17:02:25.411Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T17:02:25.484Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T17:02:25.510Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T17:02:25.526Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T17:02:25.542Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T17:02:25.557Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T17:03:07.631Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:03:07.718Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:03:07.905Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:03:07.933Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T17:03:07.935Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T17:03:08.030Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T17:03:08.061Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T17:03:08.079Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T17:03:08.099Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T17:03:08.117Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T17:09:00.035Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:09:09.594Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:09:31.568Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:09:31.660Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:09:31.645Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:09:31.800Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:09:31.830Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T17:09:31.834Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T17:09:31.913Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T17:09:31.945Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T17:09:31.959Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T17:09:31.975Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T17:09:31.989Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T17:16:49.866Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-01T17:16:49.927Z [[32minfo[39m]: POST /api/auth/login
+2024-08-01T17:16:50.169Z [[32minfo[39m]: User admin@admin.co logged in successfully
+2024-08-01T17:20:44.001Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:20:57.911Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:21:34.156Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:22:44.113Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:22:57.553Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:22:57.618Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:22:57.736Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:23:16.312Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:24:09.406Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:24:15.965Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:24:16.028Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:24:16.113Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:24:16.587Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:24:16.612Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:24:16.680Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:24:16.696Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T17:24:16.697Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T17:24:16.730Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T17:24:16.740Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T17:24:16.746Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T17:24:16.754Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T17:24:16.759Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T17:25:07.185Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T17:25:19.876Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:25:19.933Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:25:20.025Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:25:20.216Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T17:25:20.258Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T17:25:20.357Z [[32m'info'[39m]: User created successfully
+2024-08-01T17:25:20.371Z [[32m'info'[39m]: POST /api/auth/login
+2024-08-01T17:25:20.373Z [[33m'warn'[39m]: User with email test@example.com not found
+2024-08-01T17:25:20.409Z [[32m'info'[39m]: POST /api/deliveries
+2024-08-01T17:25:20.422Z [[32m'info'[39m]: GET /api/deliveries
+2024-08-01T17:25:20.431Z [[32m'info'[39m]: GET /api/deliveries/1
+2024-08-01T17:25:20.439Z [[32m'info'[39m]: PUT /api/deliveries/1
+2024-08-01T17:25:20.446Z [[32m'info'[39m]: DELETE /api/deliveries/1
+2024-08-01T23:35:27.702Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:35:50.702Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:37:53.293Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:38:43.434Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:38:58.721Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:39:24.508Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:39:43.381Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:39:59.657Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:40:04.012Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T23:40:04.096Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-01T23:40:04.219Z [[32m'info'[39m]: User created successfully
+2024-08-01T23:41:06.669Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:41:19.700Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:41:35.345Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:41:44.736Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:41:51.779Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:42:05.312Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:42:42.782Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:42:54.246Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:42:57.923Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T23:44:15.073Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:44:18.930Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T23:45:58.211Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:46:02.052Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T23:49:58.991Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:50:10.935Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:50:14.637Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-01T23:50:33.998Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:50:50.199Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-01T23:50:50.809Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T00:00:50.904Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:00:51.050Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T00:01:34.466Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:01:35.255Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T00:01:35.409Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T00:01:35.723Z [[32m'info'[39m]: User created successfully
+2024-08-02T00:06:42.282Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T00:06:42.287Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:06:42.293Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:06:42.353Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T00:06:42.428Z [[32m'info'[39m]: User created successfully
+2024-08-02T00:08:58.884Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:08:58.908Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:08:59.069Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T00:08:59.131Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T00:08:59.216Z [[32m'info'[39m]: User created successfully
+2024-08-02T00:11:05.332Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:11:05.337Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T00:11:05.388Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T00:11:05.390Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T00:11:05.472Z [[32m'info'[39m]: User created successfully
+2024-08-02T19:00:49.296Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T19:00:49.338Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T19:00:49.404Z [[32m'info'[39m]: User created successfully
+2024-08-02T19:01:15.976Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T19:01:16.004Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T19:01:16.068Z [[32m'info'[39m]: User created successfully
+2024-08-02T19:01:40.313Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T19:01:40.344Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T19:01:40.414Z [[32m'info'[39m]: User created successfully
+2024-08-02T19:02:57.194Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:03:25.984Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:03:52.604Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:05:17.481Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:07:13.219Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:07:13.319Z [[32minfo[39m]: POST /api/deliveries
+2024-08-02T19:07:13.324Z [[32minfo[39m]: Created new delivery with ID: 6df2d08a-8d75-4565-9395-a13adfe9544c
+2024-08-02T19:07:13.343Z [[32minfo[39m]: GET /api/deliveries
+2024-08-02T19:07:13.364Z [[32minfo[39m]: GET /api/deliveries/1
+2024-08-02T19:07:13.365Z [[32minfo[39m]: Fetched delivery with ID 1
+2024-08-02T19:07:13.385Z [[32minfo[39m]: PUT /api/deliveries/1
+2024-08-02T19:07:13.387Z [[32minfo[39m]: Updated delivery with ID 1
+2024-08-02T19:07:13.394Z [[32minfo[39m]: DELETE /api/deliveries/1
+2024-08-02T19:07:13.395Z [[32minfo[39m]: Deleted delivery with ID 1
+2024-08-02T19:10:28.710Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:10:28.853Z [[32minfo[39m]: POST /api/deliveries
+2024-08-02T19:10:28.858Z [[32minfo[39m]: Created new delivery with ID: 1f3a8c86-c258-48d6-9c8d-9e4e3056461f
+2024-08-02T19:10:28.872Z [[32minfo[39m]: GET /api/deliveries
+2024-08-02T19:10:28.874Z [[32minfo[39m]: Fetched all deliveries
+2024-08-02T19:10:28.881Z [[32minfo[39m]: GET /api/deliveries/1
+2024-08-02T19:10:28.882Z [[32minfo[39m]: Fetched delivery with ID 1
+2024-08-02T19:10:28.888Z [[32minfo[39m]: PUT /api/deliveries/1
+2024-08-02T19:10:28.890Z [[32minfo[39m]: Updated delivery with ID 1
+2024-08-02T19:10:28.897Z [[32minfo[39m]: DELETE /api/deliveries/1
+2024-08-02T19:10:28.897Z [[32minfo[39m]: Deleted delivery with ID 1
+2024-08-02T19:12:53.082Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:12:53.241Z [[32minfo[39m]: POST /api/deliveries
+2024-08-02T19:12:53.249Z [[32minfo[39m]: Created new delivery with ID: e089f158-4b1d-40a8-97f2-9a382c24cbf2
+2024-08-02T19:12:53.266Z [[32minfo[39m]: GET /api/deliveries
+2024-08-02T19:12:53.269Z [[32minfo[39m]: Fetched all deliveries
+2024-08-02T19:12:53.278Z [[32minfo[39m]: GET /api/deliveries/1
+2024-08-02T19:12:53.280Z [[32minfo[39m]: Fetched delivery with ID 1
+2024-08-02T19:12:53.287Z [[32minfo[39m]: PUT /api/deliveries/1
+2024-08-02T19:12:53.289Z [[32minfo[39m]: Updated delivery with ID 1
+2024-08-02T19:12:53.297Z [[32minfo[39m]: DELETE /api/deliveries/1
+2024-08-02T19:12:53.298Z [[32minfo[39m]: Deleted delivery with ID 1
+2024-08-02T19:13:11.980Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:13:12.083Z [[32minfo[39m]: POST /api/packages
+2024-08-02T19:13:12.086Z [[32minfo[39m]: Package created with ID: a5d99fa8-f87f-4753-85d2-043f211581b6
+2024-08-02T19:13:12.098Z [[32minfo[39m]: GET /api/packages
+2024-08-02T19:13:12.102Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T19:13:12.112Z [[32minfo[39m]: GET /api/packages/1
+2024-08-02T19:13:12.115Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T19:13:12.125Z [[32minfo[39m]: PUT /api/packages/1
+2024-08-02T19:13:12.166Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T19:13:12.175Z [[32minfo[39m]: DELETE /api/packages/1
+2024-08-02T19:13:12.179Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T19:59:12.252Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T19:59:12.561Z [[32minfo[39m]: POST /api/packages
+2024-08-02T19:59:12.571Z [[32minfo[39m]: Package created with ID: 1569c4ba-06df-4597-899e-2dec2b0f7d89
+2024-08-02T19:59:12.613Z [[32minfo[39m]: GET /api/packages
+2024-08-02T19:59:12.624Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T19:59:12.657Z [[32minfo[39m]: GET /api/packages/1
+2024-08-02T19:59:12.666Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T19:59:12.705Z [[32minfo[39m]: PUT /api/packages/1
+2024-08-02T19:59:12.744Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T19:59:12.773Z [[32minfo[39m]: DELETE /api/packages/1
+2024-08-02T19:59:12.786Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T20:22:51.799Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T20:24:23.762Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-02T20:24:23.932Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-02T20:24:24.122Z [[32m'info'[39m]: User created successfully
+2024-08-02T20:25:13.118Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:25:13.518Z [[32minfo[39m]: POST /api/deliveries
+2024-08-02T20:25:13.858Z [[32minfo[39m]: Created new delivery with ID: 8fa85de2-9a57-4d21-b33b-c224a50c5980
+2024-08-02T20:25:13.954Z [[32minfo[39m]: GET /api/deliveries
+2024-08-02T20:25:13.961Z [[32minfo[39m]: Fetched all deliveries
+2024-08-02T20:25:13.996Z [[32minfo[39m]: GET /api/deliveries/1
+2024-08-02T20:25:14.021Z [[32minfo[39m]: Fetched delivery with ID 1
+2024-08-02T20:25:14.047Z [[32minfo[39m]: PUT /api/deliveries/1
+2024-08-02T20:25:14.054Z [[32minfo[39m]: Updated delivery with ID 1
+2024-08-02T20:25:14.106Z [[32minfo[39m]: DELETE /api/deliveries/1
+2024-08-02T20:25:14.147Z [[32minfo[39m]: Deleted delivery with ID 1
+2024-08-02T20:25:41.113Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:29:24.668Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:34:27.477Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:35:24.441Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:35:24.691Z [[32minfo[39m]: POST /api/packages
+2024-08-02T20:35:24.700Z [[32minfo[39m]: Package created with ID: 9816ae96-f5a1-4437-8fb7-5910ca2a8343
+2024-08-02T20:35:24.735Z [[32minfo[39m]: GET /api/packages
+2024-08-02T20:35:24.744Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T20:35:24.768Z [[32minfo[39m]: GET /api/packages/1
+2024-08-02T20:35:24.773Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T20:35:24.793Z [[32minfo[39m]: PUT /api/packages/1
+2024-08-02T20:35:24.816Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T20:35:24.831Z [[32minfo[39m]: DELETE /api/packages/1
+2024-08-02T20:35:24.839Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T20:38:49.183Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:40:48.260Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:49:06.601Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:50:01.886Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:50:45.419Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-02T20:50:45.718Z [[32minfo[39m]: POST /api/packages
+2024-08-02T20:50:45.727Z [[32minfo[39m]: Package created with ID: 42d87fbc-b37c-4641-8a89-e605a68ca343
+2024-08-02T20:50:45.773Z [[32minfo[39m]: GET /api/packages
+2024-08-02T20:50:45.781Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T20:50:45.806Z [[32minfo[39m]: GET /api/packages/1
+2024-08-02T20:50:45.811Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T20:50:45.834Z [[32minfo[39m]: PUT /api/packages/1
+2024-08-02T20:50:45.864Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-02T20:50:45.885Z [[32minfo[39m]: DELETE /api/packages/1
+2024-08-02T20:50:45.896Z [[33mwarn[39m]: Package with ID 1 not found

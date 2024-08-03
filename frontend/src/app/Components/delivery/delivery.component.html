@@ -1,0 +1,94 @@
+<section>
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+        <form [formGroup]="form" class="mx-1 mx-md-4" (ngSubmit)="onSubmit()">
+          <!-- package input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="package"> package </mat-label>
+
+              <select
+                matNativeControl
+                required
+                multiple
+                id="package_id"
+                placeholder="Enter a package"
+                formControlName="package_id"
+                [errorStateMatcher]="matcher"
+                name="package_id"
+              >
+                <option
+                  *ngFor="let package of packages; index as i"
+                  [value]="package._id"
+                >
+                  {{ package.description }}
+                </option>
+              </select>
+
+              <mat-error *ngIf="package_id?.hasError('required')">
+                Package is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- location input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="location">
+                Location address
+              </mat-label>
+              <input
+                matInput
+                type="location"
+                id="location"
+                placeholder="Enter a valid location"
+                formControlName="location"
+                [errorStateMatcher]="matcher"
+                name="location"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  location?.hasError('location') &&
+                  !location?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>location</strong>
+              </mat-error>
+              <mat-error *ngIf="location?.hasError('required')">
+                Location is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!--Save Button-->
+          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+            <button
+              mat-raised-button
+              type="submit"
+              color="primary"
+              class="btn btn-primary btn-lg btn-block"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+      <!--Image-->
+      <div
+        class="col-md-9 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+      >
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+          class="img-fluid"
+          alt="Register Image"
+        />
+      </div>
+    </div>
+  </div>
+</section>

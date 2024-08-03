@@ -1,0 +1,358 @@
+<section>
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+        <form [formGroup]="form" class="mx-1 mx-md-4" (ngSubmit)="onSubmit()">
+          <!-- description input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="description">
+                description
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                id="description"
+                placeholder="Enter the description"
+                formControlName="description"
+                [errorStateMatcher]="matcher"
+                name="description"
+                required
+              />
+              <mat-error *ngIf="description?.hasError('required')">
+                Role is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- Weight input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="Weight"> Weight </mat-label>
+              <input
+                matInput
+                type="text"
+                id="weight"
+                placeholder="Enter weight"
+                formControlName="weight"
+                [errorStateMatcher]="matcher"
+                name="weight"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  weight?.hasError('weight') && !weight?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>weight</strong>
+              </mat-error>
+              <mat-error *ngIf="weight?.hasError('required')">
+                Weight is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- Height input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="Height"> Height </mat-label>
+              <input
+                matInput
+                type="text"
+                id="height"
+                placeholder="Enter height"
+                formControlName="height"
+                [errorStateMatcher]="matcher"
+                name="height"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  height?.hasError('height') && !height?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>weight</strong>
+              </mat-error>
+              <mat-error *ngIf="height?.hasError('required')">
+                Height is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- width input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="Width"> Width </mat-label>
+              <input
+                matInput
+                type="text"
+                id="width"
+                placeholder="Enter width"
+                formControlName="width"
+                [errorStateMatcher]="matcher"
+                name="width"
+                required
+              />
+              <mat-error
+                *ngIf="width?.hasError('width') && !width?.hasError('required')"
+              >
+                Please enter a valid <strong>width</strong>
+              </mat-error>
+              <mat-error *ngIf="width?.hasError('required')">
+                Width is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- depth input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="depth"> depth </mat-label>
+              <input
+                matInput
+                type="text"
+                id="depth"
+                placeholder="Enter depth"
+                formControlName="depth"
+                [errorStateMatcher]="matcher"
+                name="depth"
+                required
+              />
+              <mat-error
+                *ngIf="depth?.hasError('depth') && !depth?.hasError('required')"
+              >
+                Please enter a valid <strong>depth</strong>
+              </mat-error>
+              <mat-error *ngIf="depth?.hasError('required')">
+                depth is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- from_name input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="from_name">
+                from name
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                id="from_name"
+                placeholder="Enter from name"
+                formControlName="from_name"
+                [errorStateMatcher]="matcher"
+                name="from_name"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  from_name?.hasError('from_name') &&
+                  !from_name?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>from name</strong>
+              </mat-error>
+              <mat-error *ngIf="from_name?.hasError('required')">
+                from name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- from_address  input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="from_address ">
+                from address
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                id="from_address "
+                placeholder="Enter from_address "
+                formControlName="from_address"
+                [errorStateMatcher]="matcher"
+                name="from_address "
+                required
+              />
+              <mat-error
+                *ngIf="
+                  from_address?.hasError('from_address ') &&
+                  !from_address?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>from address </strong>
+              </mat-error>
+              <mat-error *ngIf="from_address?.hasError('required')">
+                from address is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- from_location input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="from_location">
+                from location
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                id="from_location"
+                placeholder="Enter from location (lat, lng)"
+                formControlName="from_location"
+                [errorStateMatcher]="matcher"
+                name="from_location"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  from_location?.hasError('from_location') &&
+                  !from_location?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>from location</strong>
+              </mat-error>
+              <mat-error *ngIf="from_location?.hasError('required')">
+                from location is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <!-- to_name input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="to_name"> to name </mat-label>
+              <input
+                matInput
+                type="text"
+                id="to_name"
+                placeholder="Enter to name"
+                formControlName="to_name"
+                [errorStateMatcher]="matcher"
+                name="to_name"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  to_name?.hasError('to_name') && !to_name?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>to name</strong>
+              </mat-error>
+              <mat-error *ngIf="to_name?.hasError('required')">
+                to name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- to_address  input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="to_address ">
+                to address
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                id="to_address "
+                placeholder="Enter to_address "
+                formControlName="to_address"
+                [errorStateMatcher]="matcher"
+                name="to_address "
+                required
+              />
+              <mat-error
+                *ngIf="
+                  to_address?.hasError('to_address ') &&
+                  !to_address?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>to address </strong>
+              </mat-error>
+              <mat-error *ngIf="to_address?.hasError('required')">
+                to address is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- to_location input -->
+          <div class="d-flex flex-row align-items-center mb-3">
+            <mat-form-field
+              class="form-outline flex-fill mb-0"
+              appearance="fill"
+            >
+              <mat-label class="form-label" for="to_location">
+                to location
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                id="to_location"
+                placeholder="Enter to location (lat, lng)"
+                formControlName="to_location"
+                [errorStateMatcher]="matcher"
+                name="to_location"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  to_location?.hasError('to_location') &&
+                  !to_location?.hasError('required')
+                "
+              >
+                Please enter a valid <strong>to location</strong>
+              </mat-error>
+              <mat-error *ngIf="to_location?.hasError('required')">
+                to location is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <!--Save Button-->
+          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+            <button
+              mat-raised-button
+              type="submit"
+              color="primary"
+              class="btn btn-primary btn-lg btn-block"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+      <!--Image-->
+      <div
+        class="col-md-9 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+      >
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+          class="img-fluid"
+          alt="Register Image"
+        />
+      </div>
+    </div>
+  </div>
+</section>

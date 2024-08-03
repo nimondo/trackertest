@@ -1,0 +1,9 @@
+2024-07-31T17:10:39.744Z [[31merror[39m]: 500 - User validation failed: role: `adminr` is not a valid enum value for path `role`.
+2024-08-02T19:13:12.102Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T19:13:12.115Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T19:59:12.624Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T19:59:12.666Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T20:35:24.744Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T20:35:24.773Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-02T20:50:45.781Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-02T20:50:45.811Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function

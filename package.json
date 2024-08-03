@@ -1,0 +1,36 @@
+{
+  "name": "gozemtest",
+  "version": "1.0.0",
+  "description": "GOZEM TEST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon index.js",
+    "prod": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/socket.io": "^2.1.10",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
+    "express-rate-limit": "^6.6.0",
+    "helmet": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "mongoose-unique-validator": "^2.0.3",
+    "multer": "^1.4.3",
+    "socket.io": "^3.0.4",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
+    "uuid": "^10.0.0",
+    "validator": "^13.12.0",
+    "winston": "^3.13.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

@@ -1,0 +1,189 @@
+<section>
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-7 col-xl-7">
+        <!-- data-panel -->
+        <div class="container mt-5">
+          <!--search bar -->
+          <div class="row" id="search-bar">
+            <div class="d-flex justify-content-center">
+              <form
+                [formGroup]="filterForm"
+                class="row form-inline"
+                (ngSubmit)="onSubmit()"
+              >
+                <div class="col-7 mr-3">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Enter Delivery ID"
+                      formControlName="searchFilter"
+                      name="searchFilter"
+                    />
+                  </mat-form-field>
+                </div>
+
+                <div class="offset-1 col-4 mt-2">
+                  <button
+                    mat-raised-button
+                    type="submit"
+                    color="primary"
+                    class="btn btn-primary btn-lg btn-block"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-12 table-responsive">
+                <h1 *ngIf="delivery">Delivery Details</h1>
+                <table class="table" style="margin-top: 10px" *ngIf="delivery">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>delivery</th>
+                      <td>{{ delivery._id }}</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="col">location</th>
+                      <td>
+                        lat:{{ delivery?.location?.lat }}, long:{{
+                          delivery?.location?.long
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Status</th>
+                      <td>{{ delivery?.status }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="col">pickup_time</th>
+                      <td>{{ delivery?.pickup_time | date : "medium" }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="col">start_time</th>
+                      <td>
+                        {{ delivery?.start_time | date : "medium" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">end_time</th>
+                      <td>
+                        {{ delivery?.end_time | date : "medium" }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-12 table-responsive">
+                <h1 *ngIf="packages">Package Details</h1>
+                <table class="table" style="margin-top: 10px" *ngIf="packages">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">description</th>
+                      <th scope="col">Weight</th>
+                      <th scope="col">height</th>
+                      <th scope="col">width</th>
+                      <th scope="col">depth</th>
+                      <th scope="col">from_name</th>
+                      <th scope="col">from_address</th>
+                      <th scope="col">from_location</th>
+                      <th scope="col">to_name</th>
+                      <th scope="col">to_address</th>
+                      <th scope="col">to_location</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let package of packages">
+                      <th scope="row">{{ package?._id }}</th>
+                      <td>{{ package?.description }}</td>
+                      <td>{{ package?.weight }}</td>
+                      <td>{{ package?.height }}</td>
+                      <td>{{ package?.width }}</td>
+                      <td>{{ package?.depth }}</td>
+                      <td>{{ package?.from_name }}</td>
+                      <td>{{ package?.from_address }}</td>
+                      <td>
+                        lat:{{ package?.from_location?.lat }}, long:{{
+                          package?.from_location?.long
+                        }}
+                      </td>
+                      <td>{{ package?.to_name }}</td>
+                      <td>{{ package?.to_address }}</td>
+                      <td>
+                        lat:{{ package?.to_location?.lat }}, long:{{
+                          package?.to_location?.long
+                        }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Image-->
+      <div class="col-md-5 col-lg-5 col-xl-5 d-flex align-items-center">
+        <div class="row">
+          <div class="col-8">
+            <div class="google_map_container">
+              <google-map
+                [zoom]="mapZoom"
+                [center]="mapCenter"
+                [options]="mapOptions"
+                width="100%"
+              >
+                <map-marker
+                  *ngFor="let marker of markers"
+                  heght="90%"
+                  [position]="marker.position"
+                  [label]="marker.label"
+                  [title]="marker.title"
+                  [icon]="marker.icon"
+                  (mapClick)="openInfoWindow(marker)"
+                >
+                </map-marker>
+                <map-info-window>{{ markerInfoContent }}</map-info-window>
+              </google-map>
+            </div>
+          </div>
+          <div class="col-4">
+            <button
+              class="btn btn-primary mt-5 btn-w"
+              (click)="onPickedUp(delivery._id)"
+            >
+              Picked up
+            </button>
+            <button
+              class="btn btn-warning mt-5 btn-w"
+              (click)="onInTransit(delivery._id)"
+            >
+              in-Transit
+            </button>
+            <button
+              class="btn btn-success mt-5 btn-w"
+              (click)="onDelivered(delivery._id)"
+            >
+              Delivered
+            </button>
+            <button
+              class="btn btn-danger mt-5 btn-w"
+              (click)="onFailed(delivery._id)"
+            >
+              Failed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
