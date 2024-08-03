@@ -1,4 +1,4 @@
-<section>
+<section class="bg-gray">
   <div class="card-body">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-6 col-xl-7 order-2 order-lg-1">
@@ -7,28 +7,14 @@
           <!--search bar -->
           <div class="row" id="search-bar">
             <div class="d-flex justify-content-center">
-              <form
-                [formGroup]="filterForm"
-                class="row form-inline"
-                (ngSubmit)="onSubmit()"
-              >
+              <form [formGroup]="filterForm" class="row form-inline" (ngSubmit)="onSubmit()">
                 <div class="col-7 mr-3">
                   <mat-form-field class="example-full-width">
-                    <input
-                      matInput
-                      placeholder="Enter Package ID"
-                      formControlName="searchFilter"
-                      name="searchFilter"
-                    />
+                    <input matInput placeholder="Enter Package ID" formControlName="searchFilter" name="searchFilter" />
                   </mat-form-field>
                 </div>
                 <div class="offset-1 col-4 mt-2">
-                  <button
-                    mat-raised-button
-                    type="submit"
-                    color="primary"
-                    class="btn btn-primary btn-lg btn-block"
-                  >
+                  <button mat-raised-button type="submit" color="primary" class="btn btn-primary btn-lg btn-block">
                     Search
                   </button>
                 </div>
@@ -155,23 +141,11 @@
         </div>
       </div>
       <!--Image-->
-      <div
-        class="col-md-4 col-lg-6 col-xl-5 d-flex align-items-center order-1 order-lg-2"
-      >
+      <div class="col-md-4 col-lg-6 col-xl-5 d-flex align-items-center order-1 order-lg-2">
         <div class="google_map_container">
-          <google-map
-            [zoom]="mapZoom"
-            [center]="mapCenter"
-            [options]="mapOptions"
-          >
-            <map-marker
-              *ngFor="let marker of markers"
-              [position]="marker.position"
-              [label]="marker.label"
-              [title]="marker.title"
-              [icon]="marker.icon"
-              (mapClick)="openInfoWindow(marker)"
-            >
+          <google-map [zoom]="mapZoom" [center]="mapCenter" [options]="mapOptions">
+            <map-marker *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"
+              [title]="marker.title" [icon]="marker.icon" (mapClick)="openInfoWindow(marker)">
             </map-marker>
             <map-info-window>{{ markerInfoContent }}</map-info-window>
           </google-map>

@@ -495,3 +495,52 @@
 2024-08-02T20:50:45.864Z [[33mwarn[39m]: Package with ID 1 not found
 2024-08-02T20:50:45.885Z [[32minfo[39m]: DELETE /api/packages/1
 2024-08-02T20:50:45.896Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-03T02:37:58.076Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T02:41:55.254Z [[32minfo[39m]: OPTIONS /api/auth/signup
+2024-08-03T02:41:55.316Z [[32minfo[39m]: POST /api/auth/signup
+2024-08-03T02:41:55.425Z [[32minfo[39m]: User created successfully
+2024-08-03T02:42:14.728Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-03T02:42:14.744Z [[32minfo[39m]: POST /api/auth/login
+2024-08-03T02:42:14.835Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-03T02:42:44.091Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T02:42:44.094Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T02:42:44.097Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T02:42:44.102Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T02:42:44.109Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T02:42:44.116Z [[32minfo[39m]: Fetched packages
+2024-08-03T02:43:25.283Z [[32minfo[39m]: OPTIONS /api/packages
+2024-08-03T02:43:25.287Z [[32minfo[39m]: POST /api/packages
+2024-08-03T02:43:25.323Z [[32minfo[39m]: Package created with ID: 7c648184-85ea-414d-83b2-3d010b716e89
+2024-08-03T02:43:27.769Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T02:43:27.776Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T02:43:27.781Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T02:43:27.784Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T02:43:27.790Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T02:43:27.793Z [[32minfo[39m]: Fetched packages
+2024-08-03T02:43:35.708Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T02:43:35.721Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T02:43:35.728Z [[32minfo[39m]: Fetched packages
+2024-08-03T02:43:42.727Z [[32minfo[39m]: OPTIONS /api/deliveries
+2024-08-03T02:43:42.731Z [[32minfo[39m]: POST /api/deliveries
+2024-08-03T02:43:42.770Z [[32minfo[39m]: Created new delivery with ID: b161b69e-e1ee-4323-8ebc-61b01546b3bf
+2024-08-03T02:43:42.778Z [[32minfo[39m]: OPTIONS /api/packages/7c648184-85ea-414d-83b2-3d010b716e89
+2024-08-03T02:43:42.784Z [[32minfo[39m]: PUT /api/packages/7c648184-85ea-414d-83b2-3d010b716e89
+2024-08-03T02:43:42.796Z [[32minfo[39m]: Updated package with ID 7c648184-85ea-414d-83b2-3d010b716e89
+2024-08-03T02:47:31.297Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T02:47:31.301Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T02:47:31.305Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T02:47:31.308Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T02:47:31.315Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T02:47:31.318Z [[32minfo[39m]: Fetched packages
+2024-08-03T02:50:45.514Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T02:50:45.522Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T02:50:45.532Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T02:50:45.534Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T02:50:45.538Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T02:50:45.541Z [[32minfo[39m]: Fetched packages
+2024-08-03T02:51:19.347Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-03T02:51:19.352Z [[32minfo[39m]: POST /api/auth/login
+2024-08-03T02:51:19.430Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-03T02:58:55.268Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-03T02:58:55.274Z [[32minfo[39m]: POST /api/auth/login
+2024-08-03T02:58:55.351Z [[32minfo[39m]: User znimed@gmail.com logged in successfully

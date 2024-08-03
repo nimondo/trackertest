@@ -33,7 +33,7 @@ export class SecureInnerPagesGuard implements CanActivate {
       this.authService.getToken() &&
       !this.jwtHelper.isTokenExpired(this.authService.getToken())
     ) {
-      this._snackBar.open('Access Denied, You are already logged in!', '❌');
+      this._snackBar.open('You are already logged in!', '✔️');
       this.router.navigate(['/home'], {
         queryParams: { returnUrl: state.url },
       });
