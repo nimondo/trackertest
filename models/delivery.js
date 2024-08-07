@@ -14,6 +14,11 @@ const deliverySchema = new mongoose.Schema({
     type: String,
     ref: "Package",
   }],
+  driver_id: {
+    type: String,
+    ref: 'User',
+    required: false
+  },
   pickup_time: {
     type: Date,
   },

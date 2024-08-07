@@ -7,7 +7,10 @@ import {
   RouterStateSnapshot,
 } from '@angular/router';
 
-import { Observable } from 'rxjs';
+import {
+  Observable,
+  of,
+} from 'rxjs';
 
 import { JwtHelperService } from '@auth0/angular-jwt';
 
@@ -18,54 +21,46 @@ import { AuthService } from '../Services/auth.service';
 })
 export class AuthGuard implements CanActivate {
   constructor(
-    public authService: AuthService,
-    public router: Router,
-    private _snackBar: MatSnackBar,
+    private authService: AuthService,
+    private router: Router,
+    private snackBar: MatSnackBar,
     private jwtHelper: JwtHelperService
   ) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<boolean> | Promise<boolean> | boolean {
+  ): Observable<boolean> {
+    return this.checkAuthentication(state.url, route.data['role']);
+  }
+
+  private checkAuthentication(returnUrl: string, roles: string[]): Observable<boolean> {
     const jwtToken = this.authService.getToken();
-    // const decodedToken: any =
-    //   this.authService.getToken() != null
-    //     ? jwt_decode(jwtToken as string)
-    //     : null;
-    const userRole = this.authService.getRole();
-
     if (!jwtToken || this.jwtHelper.isTokenExpired(jwtToken)) {
-      // Check if the token is missing or expired
-      if (this.jwtHelper.isTokenExpired(this.authService.getToken())) {
-        this._snackBar.open(
-          'Your session has expired. Please log in again.',
-          '❌'
-        );
-        this.authService.signOut();
-        this.router.navigate(['/signin'], {
-          queryParams: { returnUrl: state.url },
-        });
-      } else {
-        this._snackBar.open('Access Denied!', '❌');
-        this.router.navigate(['/signin'], {
-          queryParams: { returnUrl: state.url },
-        });
-      }
+      return this.handleInvalidToken(jwtToken, returnUrl);
     } else {
-      // console.log(route.data['role'], userRole);
-      if (route.data['role'] && route.data['role'].indexOf(userRole) === -1) {
-        // Check if the user's role is not granted access
-        this._snackBar.open('Access Denied! Role Not Granted.', '❌');
-        this.router.navigate(['/home'], {
-          queryParams: { returnUrl: state.url },
-        });
-        return false;
-      } else {
-        return true;
-      }
+      return this.checkUserRole(roles, returnUrl);
     }
+  }
 
-    return true;
+  private handleInvalidToken(jwtToken: string | null, returnUrl: string): Observable<boolean> {
+    if (jwtToken && this.jwtHelper.isTokenExpired(jwtToken)) {
+      this.snackBar.open('Your session has expired. Please log in again.', '❌');
+      this.authService.signOut();
+    } else {
+      this.snackBar.open('Access Denied!', '❌');
+    }
+    this.router.navigate(['/signin'], { queryParams: { returnUrl } });
+    return of(false);
+  }
+
+  private checkUserRole(roles: string[], returnUrl: string): Observable<boolean> {
+    const userRole = this.authService.getRole();
+    if (roles && roles.indexOf(userRole) === -1) {
+      this.snackBar.open('Access Denied! Role Not Granted.', '❌');
+      this.router.navigate(['/home'], { queryParams: { returnUrl } });
+      return of(false);
+    }
+    return of(true);
   }
 }

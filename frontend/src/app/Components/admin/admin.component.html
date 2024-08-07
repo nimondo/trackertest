@@ -46,11 +46,7 @@
       </table>
       <!-- Pagination -->
       <nav class="pagination justify-content-center">
-        <app-paginator
-          [totalItems]="totalItems"
-          [pageSize]="pageSize"
-          (pageChanged)="onPageChanged($event)"
-        >
+        <app-paginator [totalItems]="totalItems" [pageSize]="pageSize" (pageChanged)="onPageChanged($event)">
         </app-paginator>
       </nav>
     </div>
@@ -60,7 +56,7 @@
       </div>
     </div>
   </div>
-  <div class="row mt-5">
+  <div class="row mt-5" *ngIf="userInfo.role !=='customer'">
     <div class="col-md-8 col-lg-6 col-xl-6 table-responsive">
       <h1>Delivery List</h1>
       <table class="table" style="margin-top: 10px">
@@ -88,11 +84,8 @@
       </table>
       <!-- Pagination -->
       <nav class="pagination justify-content-center">
-        <app-paginator
-          [totalItems]="totalItemsDelivery"
-          [pageSize]="pageSizeDelivery"
-          (pageChanged)="onPageChangedDelivery($event)"
-        >
+        <app-paginator [totalItems]="totalItemsDelivery" [pageSize]="pageSizeDelivery"
+          (pageChanged)="onPageChangedDelivery($event)">
         </app-paginator>
       </nav>
     </div>

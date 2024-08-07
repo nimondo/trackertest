@@ -72,7 +72,7 @@ const routes: Routes = [
     component: AdminComponent,
     canActivate: [AuthGuard],
     data: {
-      role: ['admin'],
+      role: ['customer', 'admin', 'driver'],
     },
   },
 

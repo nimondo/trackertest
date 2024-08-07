@@ -74,6 +74,11 @@ const packageSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  customer_id: {
+    type: String,
+    ref: 'User',
+    required: false
+  },
 }, {
   timestamps: true,
 });

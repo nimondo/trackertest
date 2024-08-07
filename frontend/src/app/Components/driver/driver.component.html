@@ -2,9 +2,9 @@
   <div class="card-body">
     <div class="row justify-content-center">
       <div class="col-md-7 col-lg-7 col-xl-7">
-        <!-- data-panel -->
+        <!-- Data Panel -->
         <div class="container mt-5">
-          <!--search bar -->
+          <!-- Search Bar -->
           <div class="row" id="search-bar">
             <div class="d-flex justify-content-center">
               <form [formGroup]="filterForm" class="row form-inline" (ngSubmit)="onSubmit()">
@@ -14,9 +14,8 @@
                       name="searchFilter" />
                   </mat-form-field>
                 </div>
-
                 <div class="offset-1 col-4 mt-2">
-                  <button mat-raised-button type="submit" color="primary" class="btn btn-primary btn-lg btn-block">
+                  <button type="submit" color="primary" class="btn btn-success btn-lg btn-block">
                     Search
                   </button>
                 </div>
@@ -29,21 +28,18 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">description</th>
+                      <th scope="col">Description</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th>delivery</th>
+                      <th>Delivery</th>
                       <td>{{ delivery._id }}</td>
                     </tr>
-
                     <tr>
-                      <th scope="col">location</th>
+                      <th scope="col">Location</th>
                       <td>
-                        lat:{{ delivery?.location?.lat }}, long:{{
-                          delivery?.location?.long
-                        }}
+                        lat:{{ delivery?.location?.lat }}, long:{{ delivery?.location?.long }}
                       </td>
                     </tr>
                     <tr>
@@ -51,20 +47,16 @@
                       <td>{{ delivery?.status }}</td>
                     </tr>
                     <tr>
-                      <th scope="col">pickup_time</th>
-                      <td>{{ delivery?.pickup_time | date : "medium" }}</td>
+                      <th scope="col">Pickup Time</th>
+                      <td>{{ delivery?.pickup_time | date: 'medium' }}</td>
                     </tr>
                     <tr>
-                      <th scope="col">start_time</th>
-                      <td>
-                        {{ delivery?.start_time | date : "medium" }}
-                      </td>
+                      <th scope="col">Start Time</th>
+                      <td>{{ delivery?.start_time | date: 'medium' }}</td>
                     </tr>
                     <tr>
-                      <th scope="col">end_time</th>
-                      <td>
-                        {{ delivery?.end_time | date : "medium" }}
-                      </td>
+                      <th scope="col">End Time</th>
+                      <td>{{ delivery?.end_time | date: 'medium' }}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -75,17 +67,17 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">description</th>
+                      <th scope="col">Description</th>
                       <th scope="col">Weight</th>
-                      <th scope="col">height</th>
-                      <th scope="col">width</th>
-                      <th scope="col">depth</th>
-                      <th scope="col">from_name</th>
-                      <th scope="col">from_address</th>
-                      <th scope="col">from_location</th>
-                      <th scope="col">to_name</th>
-                      <th scope="col">to_address</th>
-                      <th scope="col">to_location</th>
+                      <th scope="col">Height</th>
+                      <th scope="col">Width</th>
+                      <th scope="col">Depth</th>
+                      <th scope="col">From Name</th>
+                      <th scope="col">From Address</th>
+                      <th scope="col">From Location</th>
+                      <th scope="col">To Name</th>
+                      <th scope="col">To Address</th>
+                      <th scope="col">To Location</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -99,16 +91,12 @@
                       <td>{{ package?.from_name }}</td>
                       <td>{{ package?.from_address }}</td>
                       <td>
-                        lat:{{ package?.from_location?.lat }}, long:{{
-                          package?.from_location?.long
-                        }}
+                        lat:{{ package?.from_location?.lat }}, long:{{ package?.from_location?.long }}
                       </td>
                       <td>{{ package?.to_name }}</td>
                       <td>{{ package?.to_address }}</td>
                       <td>
-                        lat:{{ package?.to_location?.lat }}, long:{{
-                          package?.to_location?.long
-                        }}
+                        lat:{{ package?.to_location?.lat }}, long:{{ package?.to_location?.long }}
                       </td>
                     </tr>
                   </tbody>
@@ -118,15 +106,14 @@
           </div>
         </div>
       </div>
-      <!--Image-->
+      <!-- Google Map and Actions -->
       <div class="col-md-5 col-lg-5 col-xl-5 d-flex align-items-center">
         <div class="row">
           <div class="col-8">
             <div class="google_map_container">
               <google-map [zoom]="mapZoom" [center]="mapCenter" [options]="mapOptions" width="100%">
-                <map-marker *ngFor="let marker of markers" heght="90%" [position]="marker.position"
-                  [label]="marker.label" [title]="marker.title" [icon]="marker.icon"
-                  (mapClick)="openInfoWindow(marker)">
+                <map-marker *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"
+                  [title]="marker.title" [icon]="marker.icon" (mapClick)="openInfoWindow(marker)">
                 </map-marker>
                 <map-info-window>{{ markerInfoContent }}</map-info-window>
               </google-map>
@@ -137,7 +124,7 @@
               Picked up
             </button>
             <button class="btn btn-warning mt-5 btn-w" (click)="onInTransit(delivery._id)">
-              in-Transit
+              In-Transit
             </button>
             <button class="btn btn-success mt-5 btn-w" (click)="onDelivered(delivery._id)">
               Delivered

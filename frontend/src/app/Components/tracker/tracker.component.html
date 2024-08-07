@@ -1,147 +1,140 @@
 <section class="bg-gray">
   <div class="card-body">
     <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6 col-xl-7 order-2 order-lg-1">
-        <!-- data-panel -->
+      <!-- Column for Details -->
+      <div class="col-md-6 d-flex flex-column order-2 order-md-1">
         <div class="container mt-5">
-          <!--search bar -->
+          <!-- Search bar -->
           <div class="row" id="search-bar">
             <div class="d-flex justify-content-center">
               <form [formGroup]="filterForm" class="row form-inline" (ngSubmit)="onSubmit()">
-                <div class="col-7 mr-3">
+                <div class="col-8">
                   <mat-form-field class="example-full-width">
                     <input matInput placeholder="Enter Package ID" formControlName="searchFilter" name="searchFilter" />
                   </mat-form-field>
                 </div>
-                <div class="offset-1 col-4 mt-2">
-                  <button mat-raised-button type="submit" color="primary" class="btn btn-primary btn-lg btn-block">
+                <div class="col-4">
+                  <button type="submit" color="primary" class="btn btn-success btn-lg btn-block">
                     Search
                   </button>
                 </div>
               </form>
             </div>
-            <div class="row d-flex justify-content-center">
-              <div class="col-12">
-                <h1 *ngIf="package">Package Details</h1>
-                <table class="table" style="margin-top: 10px" *ngIf="package">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>description</th>
-                      <td>{{ package?.description }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Weight</th>
-                      <td>{{ package?.weight }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">height</th>
-                      <td>{{ package?.height }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">width</th>
-                      <td>{{ package?.width }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">depth</th>
-                      <td>{{ package?.depth }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">from_name</th>
-                      <td>{{ package?.from_name }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">from_address</th>
-                      <td>{{ package?.from_address }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">from_location</th>
-                      <td>
-                        lat:{{ package?.from_location?.lat }}, long:{{
-                          package?.from_location?.long
-                        }}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">to_name</th>
-                      <td>{{ package?.to_name }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">to_address</th>
-                      <td>{{ package?.to_address }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">to_location</th>
-                      <td>
-                        lat:{{ package?.to_location?.lat }}, long:{{
-                          package?.to_location?.long
-                        }}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Package</th>
-                      <th scope="row">{{ package._id }}</th>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-12">
-                <h1 *ngIf="delivery">Delivery Details</h1>
-                <table class="table" style="margin-top: 10px" *ngIf="delivery">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>delivery</th>
-                      <td>{{ delivery._id }}</td>
-                    </tr>
-
-                    <tr>
-                      <th scope="col">location</th>
-                      <td>
-                        lat:{{ delivery?.location?.lat }}, long:{{
-                          delivery?.location?.long
-                        }}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Status</th>
-                      <td>{{ delivery?.status }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">pickup_time</th>
-                      <td>{{ delivery?.pickup_time | date : "medium" }}</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">start_time</th>
-                      <td>
-                        {{ delivery?.start_time | date : "medium" }}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">end_time</th>
-                      <td>
-                        {{ delivery?.end_time | date : "medium" }}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          </div>
+          <!-- Package Details -->
+          <div class="row d-flex justify-content-center" *ngIf="package">
+            <div class="col-12">
+              <h1>Package Details</h1>
+              <table class="table mt-2">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Description</th>
+                    <td>{{ package?.description }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Weight</th>
+                    <td>{{ package?.weight }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Height</th>
+                    <td>{{ package?.height }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Width</th>
+                    <td>{{ package?.width }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Depth</th>
+                    <td>{{ package?.depth }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">From Name</th>
+                    <td>{{ package?.from_name }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">From Address</th>
+                    <td>{{ package?.from_address }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">From Location</th>
+                    <td>
+                      lat: {{ package?.from_location?.lat }}, long: {{ package?.from_location?.long }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">To Name</th>
+                    <td>{{ package?.to_name }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">To Address</th>
+                    <td>{{ package?.to_address }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">To Location</th>
+                    <td>
+                      lat: {{ package?.to_location?.lat }}, long: {{ package?.to_location?.long }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Package</th>
+                    <td>{{ package._id }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Delivery Details -->
+          <div class="row d-flex justify-content-center" *ngIf="delivery">
+            <div class="col-12">
+              <h1>Delivery Details</h1>
+              <table class="table mt-2">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Delivery</th>
+                    <td>{{ delivery._id }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Location</th>
+                    <td>
+                      lat: {{ delivery?.location?.lat }}, long: {{ delivery?.location?.long }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Status</th>
+                    <td>{{ delivery?.status }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Pickup Time</th>
+                    <td>{{ delivery?.pickup_time | date : "medium" }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Start Time</th>
+                    <td>{{ delivery?.start_time | date : "medium" }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">End Time</th>
+                    <td>{{ delivery?.end_time | date : "medium" }}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
-      <!--Image-->
-      <div class="col-md-4 col-lg-6 col-xl-5 d-flex align-items-center order-1 order-lg-2">
+      <!-- Column for Google Map -->
+      <div class="col-md-6 d-flex align-items-center order-1 order-md-2">
         <div class="google_map_container">
           <google-map [zoom]="mapZoom" [center]="mapCenter" [options]="mapOptions">
             <map-marker *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"

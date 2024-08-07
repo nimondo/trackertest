@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 
+import { AuthService } from 'src/app/Services/auth.service';
 import { DeliveryService } from 'src/app/Services/delivery.service';
 import { PackageService } from 'src/app/Services/package.service';
 
@@ -16,14 +17,23 @@ export class AdminComponent {
   totalItems!: number;
   pageSizeDelivery!: number;
   totalItemsDelivery!: number;
+  userInfo: any = {};
   constructor(
     private deliveryService: DeliveryService,
-    private packageService: PackageService
+    private packageService: PackageService,
+    private authService: AuthService
   ) {
     this.getAllPackages();
     this.getAllDeliveries();
+    this.refreshProfile();
   }
 
+    //get User Info
+    refreshProfile() {
+      this.userInfo.userId = this.authService.getUserId();
+      this.userInfo.email = this.authService.getUser();
+      this.userInfo.role = this.authService.getRole();
+    }
   getAllPackages() {
     this.packageService.getAll().subscribe((response: any) => {
       this.totalItems = response.data.totalPackages;

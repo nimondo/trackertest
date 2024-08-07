@@ -174,8 +174,9 @@ export class TrackerComponent {
   onSubmit() {
     this.packageService.get(this.search?.value).subscribe({
       next: (res) => {
-        this.package = res.package;
-        this.delivery = res.package?.active_delivery_id;
+        console.log("res data", res.packageData);
+        this.package = res.packageData;
+        this.delivery = res.packageData?.active_delivery_id;
         this.markerdata = [
           {
             position: new google.maps.LatLngAltitude({

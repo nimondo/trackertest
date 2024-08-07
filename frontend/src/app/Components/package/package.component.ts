@@ -7,7 +7,11 @@ import {
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { ErrorsStateMatcher } from 'src/app/Error-state-matcher';
+import { AuthService } from 'src/app/Services/auth.service';
 import { PackageService } from 'src/app/Services/package.service';
+import {
+  validateCoordinates,
+} from 'src/app/utils/validators'; // Import the new validator
 import { v4 as uuid4 } from 'uuid';
 
 @Component({
@@ -16,12 +20,18 @@ import { v4 as uuid4 } from 'uuid';
   styleUrls: ['./package.component.css'],
 })
 export class PackageComponent {
+  userId: any = "";
   constructor(
     private packageService: PackageService,
-    private _snackBar: MatSnackBar
-  ) {}
+    private _snackBar: MatSnackBar,
+    private authService: AuthService
+  ) {
+   
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userId = this.authService.getUserId();
+  }
 
   //Declaration
   // check the form is submitted or not yet
@@ -40,13 +50,13 @@ export class PackageComponent {
     from_address: new FormControl('', [Validators.required]),
     from_location: new FormControl('', [
       Validators.required,
-      // Validators.pattern('/[^,]+/g'),
+      validateCoordinates,
     ]),
     to_name: new FormControl('', [Validators.required]),
     to_address: new FormControl('', [Validators.required]),
     to_location: new FormControl('', [
       Validators.required,
-      // Validators.pattern('/[^,]+/g'),
+      validateCoordinates,
     ]),
   });
 
@@ -106,15 +116,16 @@ export class PackageComponent {
         from_name: this.from_name?.value,
         from_address: this.from_address?.value,
         from_location: {
-          lat: this.from_location?.value.split(',')[0],
-          long: this.from_location?.value.split(',')[1],
+          lat: parseFloat(this.from_location?.value.split(',')[0]),
+          long: parseFloat(this.from_location?.value.split(',')[1]),
         },
         to_name: this.to_name?.value,
         to_address: this.to_address?.value,
         to_location: {
-          lat: this.to_location?.value.split(',')[0],
-          long: this.to_location?.value.split(',')[1],
+          lat: parseFloat(this.to_location?.value.split(',')[0]),
+          long: parseFloat(this.to_location?.value.split(',')[1]),
         },
+        customer_id: this.userId,
       };
       console.log('package', packageData);
       this.packageService.Create(packageData).subscribe(() => {

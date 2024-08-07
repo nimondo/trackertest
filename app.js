@@ -8,7 +8,7 @@ const userRoutes = require("./routes/user");
 const helmet = require("helmet");
 const path = require("path");
 const rateLimit = require("express-rate-limit");
-const logger = require('./logger'); // Importer le logger
+const logger = require('./logger');
 
 // Swagger
 const swaggerJsDoc = require("swagger-jsdoc");
@@ -71,9 +71,9 @@ app.use((req, res, next) => {
 });
 
 //delivery
-app.use("/api/deliveries", deliveryRoutes);
+app.use("/api/delivery", deliveryRoutes);
 //package
-app.use("/api/packages", packageRoutes);
+app.use("/api/package", packageRoutes);
 //auth
 app.use("/api/auth", userRoutes);
 //default

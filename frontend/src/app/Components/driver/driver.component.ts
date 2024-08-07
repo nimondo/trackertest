@@ -1,5 +1,7 @@
 import {
   Component,
+  OnDestroy,
+  OnInit,
   ViewChild,
 } from '@angular/core';
 import {
@@ -17,6 +19,7 @@ import {
   interval,
   Subscription,
 } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 import { DeliveryService } from 'src/app/Services/delivery.service';
 
 @Component({
@@ -24,18 +27,15 @@ import { DeliveryService } from 'src/app/Services/delivery.service';
   templateUrl: './driver.component.html',
   styleUrls: ['./driver.component.css'],
 })
-export class DriverComponent {
+export class DriverComponent implements OnInit, OnDestroy {
   loading = false;
   @ViewChild(GoogleMap, { static: false }) map!: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false }) infoWindow!: MapInfoWindow;
 
   markers: any[] = [];
   mapZoom = 12;
-  point = {
-    lat: 6.13365,
-    lng: 1.22311,
-  };
-  mapCenter: google.maps.LatLng = new google.maps.LatLng(this.point);
+  defaultPoint = { lat: 6.13365, lng: 1.22311 };
+  mapCenter: google.maps.LatLng = new google.maps.LatLng(this.defaultPoint);
   mapOptions: google.maps.MapOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     zoomControl: true,
@@ -51,145 +51,116 @@ export class DriverComponent {
     animation: google.maps.Animation.DROP,
   };
 
-  openInfoWindow(marker: MapMarker) {
-    // this is called when the marker is clicked.
-    this.infoWindow.open(marker);
-  }
-
-  addMarker(markerData: any[]) {
-    this.markers = [];
-    for (const marker of markerData) {
-      this.markers.push({
-        position: marker.position,
-        label: {
-          color: marker.color,
-          text: 'Marker label ' + (this.markers.length + 1),
-        },
-        title: 'Marker title ' + (this.markers.length + 1),
-        options: {
-          animation: google.maps.Animation.BOUNCE,
-        },
-        icon:
-          marker.icon ||
-          'https://unpkg.com/leaflet@1.4.0/dist/images/marker-icon.png',
-        //icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-      });
-    }
-  }
   packages: any;
   delivery: any;
-  markerdata: any[] = [];
+  markerData: any[] = [];
   filterForm: FormGroup = new FormGroup({
     searchFilter: new FormControl<string>(''),
   });
   searchFilter: string = '';
-  filterFormSubsription!: Subscription;
+  filterFormSubscription!: Subscription;
+  intervalSubscription!: Subscription;
+
   constructor(
     private deliveryService: DeliveryService,
     private socket: Socket
   ) {}
-  ngOnDestroy(): void {
-    // this.filterFormSubsription.unsubscribe();
-  }
 
-  //get all Form Fields
-  get search() {
-    return this.filterForm.get('searchFilter');
-  }
   ngOnInit(): void {
     this.setCurrentLocation();
-    let subscribe = interval(20000).subscribe((val) => {
+    this.intervalSubscription = interval(20000).subscribe(() => {
       this.setCurrentLocation();
-      // console.log('test', val);
     });
-    if (['delivered', 'failed'].includes(this.delivery?.status)) {
-      subscribe.unsubscribe();
-    }
 
     this.socket.on('connect', () => {
-      console.log('Connected to server 2');
+      console.log('Connected to server');
     });
 
-    // this.filterFormSubsription = this.filterForm.valueChanges
-    //   .pipe(debounceTime(400))
-    //   .subscribe((changes) => {
-    //     this.searchFilter = changes.searchFilter;
-    //     this.deliveryService.get(this.searchFilter).subscribe({
-    //       next: (res) => {
-    //         console.log('changes', res);
-    //         this.packages = res.delivery?.package_id;
-    //         this.delivery = res.delivery;
-    //       },
-    //     });
-    //   });
+    this.setupFormListener();
   }
-  // submit fntc
-  onSubmit() {
+
+  ngOnDestroy(): void {
+    if (this.filterFormSubscription) {
+      this.filterFormSubscription.unsubscribe();
+    }
+    if (this.intervalSubscription) {
+      this.intervalSubscription.unsubscribe();
+    }
+  }
+
+  openInfoWindow(marker: MapMarker): void {
+    this.infoWindow.open(marker);
+  }
+
+  addMarker(markerData: any[]): void {
+    this.markers = markerData.map((marker, index) => ({
+      position: marker.position,
+      label: {
+        color: marker.color,
+        text: 'Marker label ' + (index + 1),
+      },
+      title: 'Marker title ' + (index + 1),
+      options: {
+        animation: google.maps.Animation.BOUNCE,
+      },
+      icon: marker.icon || 'https://unpkg.com/leaflet@1.4.0/dist/images/marker-icon.png',
+    }));
+  }
+
+  onSubmit(): void {
     this.deliveryService.get(this.search?.value).subscribe({
       next: (res) => {
-        this.packages = res.delivery?.package_id;
-        this.delivery = res.delivery;
-        this.markerdata = [
+        this.packages = res?.package_id;
+        this.delivery = res;
+
+        const lat = parseFloat(this.delivery?.location?.lat);
+        const lng = parseFloat(this.delivery?.location?.long);
+        this.markerData = [
           {
-            position: new google.maps.LatLngAltitude({
-              lat: parseFloat(this.delivery?.location?.lat),
-              lng: parseFloat(this.delivery?.location?.long),
-            }),
+            position: new google.maps.LatLng({ lat, lng }),
             color: 'blue',
             icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
           },
         ];
-        for (const packageData of this.packages) {
-          this.markerdata.push({
-            position: {
-              lat: Number(packageData?.from_location?.lat),
-              lng: Number(packageData?.from_location?.long),
-            },
+
+        this.packages.forEach((packageData: any) => {
+          const fromLat = Number(packageData?.from_location?.lat);
+          const fromLng = Number(packageData?.from_location?.long);
+          const toLat = Number(packageData.to_location?.lat);
+          const toLng = Number(packageData?.to_location?.long);
+
+          this.markerData.push({
+            position: { lat: fromLat, lng: fromLng },
             color: 'red',
           });
-          this.markerdata.push({
-            position: {
-              lat: Number(packageData.to_location?.lat),
-              lng: Number(packageData?.to_location?.long),
-            },
+          this.markerData.push({
+            position: { lat: toLat, lng: toLng },
             color: 'red',
           });
-        }
-        this.addMarker(this.markerdata);
+        });
+        this.addMarker(this.markerData);
       },
     });
   }
-  onPickedUp(id: string = '') {
-    if (id) {
-      this.updateData(
-        id,
-        { status: 'picked-up', pickup_time: new Date() },
-        'status_changed'
-      );
-    }
+
+  onPickedUp(id: string): void {
+    this.updateStatus(id, "status_changed", {status:'picked-up', pickup_time: new Date() });
   }
-  onInTransit(id: string) {
-    this.updateData(
-      id,
-      { status: 'in-transit', start_time: new Date() },
-      'status_changed'
-    );
+
+  onInTransit(id: string): void {
+    this.updateStatus(id, "status_changed",  { status:'in-transit',start_time: new Date() });
   }
-  onDelivered(id: string) {
-    this.updateData(
-      id,
-      { status: 'delivered', end_time: new Date() },
-      'status_changed'
-    );
+
+  onDelivered(id: string): void {
+    this.updateStatus(id, "status_changed",  {status:'delivered', end_time: new Date() });
   }
-  onFailed(id: string) {
-    this.updateData(
-      id,
-      { status: 'failed', start_time: new Date() },
-      'status_changed'
-    );
+
+  onFailed(id: string): void {
+    this.updateStatus(id, "status_changed", { status:'failed',start_time: new Date() });
   }
-  updateData(id: string, data: any, operation: string) {
+
+  private updateStatus(id: string, operation: string, additionalData: any): void {
+    const data = {  ...additionalData };
     this.deliveryService.Update(id, data).subscribe({
       next: (res) => {
         if (operation == 'location_changed') {
@@ -203,64 +174,65 @@ export class DriverComponent {
             console.log('message:', data);
           });
         }
-
-        // this.socket.fromEvent<any>('editDelivery').subscribe({
-        //   next: (data) => {
-        //     console.log('data', data);
-        //   },
-        // });
-
         this.delivery = { ...this.delivery, ...data };
-
-        // console.log('after update', this.delivery);
       },
     });
   }
-  private setCurrentLocation() {
+
+  private setCurrentLocation(): void {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          this.point.lat = position.coords.latitude;
-          this.point.lng = position.coords.longitude;
-          this.updateMarker(this.point);
+          const point = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          this.defaultPoint = point;
+          this.updateMarker(this.defaultPoint);
         },
-        (error) => {
-          this.point.lat = 6.13365;
-          this.point.lng = 1.22311;
-          this.updateMarker(this.point);
+        () => {
+          this.updateMarker(this.defaultPoint);
         }
       );
     } else {
-      this.point.lat = 6.13365;
-      this.point.lng = 1.22311;
-      this.updateMarker(this.point);
+      this.updateMarker(this.defaultPoint);
     }
   }
 
-  updateMarker(point: any) {
-    if (this.markerdata.length == 0) {
-      this.markerdata = [
-        {
-          position: new google.maps.LatLngAltitude(point),
-          color: 'blue',
-          icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-        },
-      ];
-    } else {
-      this.markerdata[0].position = new google.maps.LatLngAltitude(point);
-    }
-    this.addMarker(this.markerdata);
+  private updateMarker(point: { lat: number; lng: number }): void {
+    this.markerData = [
+      {
+        position: new google.maps.LatLng(point),
+        color: 'blue',
+        icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+      },
+    ];
+    this.addMarker(this.markerData);
     if (this.delivery?._id) {
-      this.updateData(
-        this.delivery._id,
-        {
-          location: {
-            lat: point.lat,
-            long: point.lng,
-          },
+      this.updateStatus(this.delivery._id, 'location_changed', {
+        location: {
+          lat: point.lat,
+          long: point.lng,
         },
-        'location_changed'
-      );
+      });
     }
+  }
+
+  private setupFormListener(): void {
+    this.filterFormSubscription = this.filterForm.valueChanges
+      .pipe(debounceTime(400))
+      .subscribe((changes) => {
+        this.searchFilter = changes.searchFilter;
+        this.deliveryService.get(this.searchFilter).subscribe({
+          next: (res) => {
+            this.packages = res?.package_id;
+            this.delivery = res;
+          },
+        });
+      });
+  }
+
+  get search(): FormControl<string> {
+    return this.filterForm.get('searchFilter') as FormControl<string>;
   }
 }

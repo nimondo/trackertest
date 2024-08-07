@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { DataService } from './data.service';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
 import { environment } from '../../environments/environment';
+import { DataService } from './data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,6 @@ import { environment } from '../../environments/environment';
 export class PackageService extends DataService{
 
   constructor(http:HttpClient,private httpPrivate : HttpClient){
-    super(`${environment.apiUrl}packages`,http);
+    super(`${environment.apiUrl}package`,http);
   }
 }

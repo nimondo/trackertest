@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { AuthService } from 'src/app/Services/auth.service';
-import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -13,7 +12,6 @@ export class UserComponent {
   userId: string = '';
   userInfo: any = {};
   constructor(
-    private userService: UserService,
     private authService: AuthService
   ) {
     this.userId = this.authService.getUserId() as string;

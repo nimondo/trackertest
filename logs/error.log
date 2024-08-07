@@ -7,3 +7,6 @@
 2024-08-02T20:35:24.773Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
 2024-08-02T20:50:45.781Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
 2024-08-02T20:50:45.811Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-03T20:43:27.398Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-03T20:43:27.421Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-07T12:18:28.182Z [[31merror[39m]: 500 - Validation failed: status: `location_changed` is not a valid enum value for path `status`.

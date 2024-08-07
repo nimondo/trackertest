@@ -8,21 +8,11 @@
             <i class="me-3">
               <mat-icon> account_circle </mat-icon>
             </i>
-            <mat-form-field
-              class="form-outline flex-fill mb-0"
-              appearance="fill"
-            >
+            <mat-form-field class="form-outline flex-fill mb-0" appearance="fill">
               <mat-label class="form-label" for="lastname"> Role </mat-label>
 
-              <select
-                matNativeControl
-                required
-                id="role"
-                placeholder="Enter a valid role"
-                formControlName="role"
-                [errorStateMatcher]="matcher"
-                name="role"
-              >
+              <select matNativeControl required id="role" placeholder="Enter a valid role" formControlName="role"
+                [errorStateMatcher]="matcher" name="role">
                 <option value="customer">Customer</option>
                 <option value="driver">Driver</option>
                 <option value="admin">Admin</option>
@@ -38,26 +28,13 @@
             <i class="me-3">
               <mat-icon> email </mat-icon>
             </i>
-            <mat-form-field
-              class="form-outline flex-fill mb-0"
-              appearance="fill"
-            >
+            <mat-form-field class="form-outline flex-fill mb-0" appearance="fill">
               <mat-label class="form-label" for="Email">
                 Email address
               </mat-label>
-              <input
-                matInput
-                type="email"
-                id="email"
-                placeholder="Enter a valid email address"
-                formControlName="email"
-                [errorStateMatcher]="matcher"
-                name="email"
-                required
-              />
-              <mat-error
-                *ngIf="email?.hasError('email') && !email?.hasError('required')"
-              >
+              <input matInput type="email" id="email" placeholder="Enter a valid email address" formControlName="email"
+                [errorStateMatcher]="matcher" name="email" required />
+              <mat-error *ngIf="email?.hasError('email') && !email?.hasError('required')">
                 Please enter a valid <strong>email</strong> address
               </mat-error>
               <mat-error *ngIf="email?.hasError('required')">
@@ -70,61 +47,35 @@
             <i class="me-3">
               <mat-icon> lock </mat-icon>
             </i>
-            <mat-form-field
-              class="form-outline flex-fill mb-0"
-              appearance="fill"
-            >
+            <mat-form-field class="form-outline flex-fill mb-0" appearance="fill">
               <mat-label class="form-label" for="password">
                 Password
               </mat-label>
-              <input
-                matInput
-                type="password"
-                id="password"
-                placeholder="Enter password"
-                formControlName="password"
-                [errorStateMatcher]="matcher"
-                [type]="hide ? 'password' : 'text'"
-                name="password"
-                required
-              />
-              <button
-                type="button"
-                mat-icon-button
-                matSuffix
-                (click)="hide = !hide"
-                [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hide"
-              >
+              <input matInput type="password" id="password" placeholder="Enter password" formControlName="password"
+                [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'" name="password" required />
+              <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
                 <mat-icon>{{
                   hide ? "visibility_off" : "visibility"
                 }}</mat-icon>
               </button>
-              <mat-error
-                *ngIf="
+              <mat-error *ngIf="
                   password?.hasError('pattern') &&
                   !password?.hasError('required')
-                "
-              >
+                ">
                 Must contain at least <strong>one number</strong> and
                 <strong>one uppercase</strong> and
                 <strong>lowercase letters</strong> , and at
                 <strong>least 8</strong> or more characters.
               </mat-error>
-              <mat-error
-                *ngIf="
+              <mat-error *ngIf="
                   password?.hasError('minlength') &&
                   !password?.hasError('required')
-                "
-              >
+                ">
                 Password must have
-                <strong
-                  >{{password?.errors?.['minlength'].requiredLength}}</strong
-                >
+                <strong>{{password?.errors?.['minlength'].requiredLength}}</strong>
                 Letters ,You have Submitted
-                <strong
-                  >{{password?.errors?.['minlength'].actualLength}}</strong
-                >
+                <strong>{{password?.errors?.['minlength'].actualLength}}</strong>
                 Letters
               </mat-error>
               <mat-error *ngIf="password?.hasError('required')">
@@ -137,32 +88,14 @@
             <i class="me-3">
               <mat-icon> vpn_key </mat-icon>
             </i>
-            <mat-form-field
-              class="form-outline flex-fill mb-0"
-              appearance="fill"
-            >
+            <mat-form-field class="form-outline flex-fill mb-0" appearance="fill">
               <mat-label class="form-label" for="cPassword">
                 Confirm Password
               </mat-label>
-              <input
-                matInput
-                type="password"
-                id="cPassword"
-                placeholder="Enter password"
-                formControlName="cPassword"
-                [errorStateMatcher]="matcher"
-                [type]="hide ? 'password' : 'text'"
-                name="cPassword"
-                required
-              />
-              <button
-                type="button"
-                mat-icon-button
-                matSuffix
-                (click)="hide = !hide"
-                [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hide"
-              >
+              <input matInput type="password" id="cPassword" placeholder="Enter password" formControlName="cPassword"
+                [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'" name="cPassword" required />
+              <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
                 <mat-icon>{{
                   hide ? "visibility_off" : "visibility"
                 }}</mat-icon>
@@ -177,26 +110,16 @@
           </div>
           <!--Register Button-->
           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-            <button
-              mat-raised-button
-              type="submit"
-              color="primary"
-              class="btn btn-primary btn-lg btn-block"
-            >
+            <button type="submit" color="primary" class="btn btn-success btn-lg btn-block">
               Register
             </button>
           </div>
         </form>
       </div>
       <!--Image-->
-      <div
-        class="col-md-9 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
-      >
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-          class="img-fluid"
-          alt="Register Image"
-        />
+      <div class="col-md-9 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid"
+          alt="Register Image" />
       </div>
     </div>
   </div>

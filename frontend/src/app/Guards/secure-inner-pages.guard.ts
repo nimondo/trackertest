@@ -7,7 +7,10 @@ import {
   RouterStateSnapshot,
 } from '@angular/router';
 
-import { Observable } from 'rxjs';
+import {
+  Observable,
+  of,
+} from 'rxjs';
 
 import { JwtHelperService } from '@auth0/angular-jwt';
 
@@ -18,26 +21,26 @@ import { AuthService } from '../Services/auth.service';
 })
 export class SecureInnerPagesGuard implements CanActivate {
   constructor(
-    public authService: AuthService,
-    public router: Router,
-    private _snackBar: MatSnackBar,
+    private authService: AuthService,
+    private router: Router,
+    private snackBar: MatSnackBar,
     private jwtHelper: JwtHelperService
   ) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<boolean> | Promise<boolean> | boolean {
-    // Check if the user is already logged in and the token is not expired
-    if (
-      this.authService.getToken() &&
-      !this.jwtHelper.isTokenExpired(this.authService.getToken())
-    ) {
-      this._snackBar.open('You are already logged in!', '✔️');
-      this.router.navigate(['/home'], {
-        queryParams: { returnUrl: state.url },
-      });
+  ): Observable<boolean> {
+    return this.checkLogin(state.url);
+  }
+
+  private checkLogin(returnUrl: string): Observable<boolean> {
+    const token = this.authService.getToken();
+    if (token && !this.jwtHelper.isTokenExpired(token)) {
+      this.snackBar.open('You are already logged in!', '✔️');
+      this.router.navigate(['/home'], { queryParams: { returnUrl } });
+      return of(false);
     }
-    return true;
+    return of(true);
   }
 }

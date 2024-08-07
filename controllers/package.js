@@ -63,7 +63,7 @@ exports.getAllPackages = handleAsync(async (req, res) => {
       .exec(),
   };
 
-  logger.info("Fetched packages");
+  logger.info("Fetched packages", result);
   res.status(200).json({
     msg: "Packages fetched successfully",
     data: result,

@@ -1,4 +1,4 @@
-const Delivery = require('../models/Delivery');
+const Delivery = require('../models/delivery');
 const logger = require('../logger');
 const handleAsync = require('../utils/handleAsync');
 const {
@@ -6,9 +6,42 @@ const {
 } = require('uuid');
 
 exports.getAllDeliveries = handleAsync(async (req, res) => {
-  const deliveries = await Delivery.find();
-  logger.info('Fetched all deliveries');
-  res.status(200).json(deliveries);
+  const user = req.query.user;
+  const filter = user ? {
+    user
+  } : {};
+
+  const pageNumber = parseInt(req.query.page, 10) || 0;
+  const limit = parseInt(req.query.limit, 10) || 12;
+
+  const startIndex = pageNumber * limit;
+  const endIndex = startIndex + limit;
+
+  const totalDeliveries = await Delivery.countDocuments(filter).exec();
+
+  const result = {
+    totalDeliveries,
+    rowsPerPage: limit,
+    previous: startIndex > 0 ? {
+      pageNumber: pageNumber - 1,
+      limit
+    } : undefined,
+    next: endIndex < totalDeliveries ? {
+      pageNumber: pageNumber + 1,
+      limit
+    } : undefined,
+    data: await Delivery.find(filter)
+      .sort('-_id')
+      .skip(startIndex)
+      .limit(limit)
+      .exec(),
+  };
+
+  logger.info('Fetched deliveries');
+  res.status(200).json({
+    msg: 'Deliveries fetched successfully',
+    data: result,
+  });
 });
 
 exports.createDelivery = handleAsync(async (req, res) => {
@@ -28,7 +61,7 @@ exports.getDeliveryById = handleAsync(async (req, res) => {
   const {
     id
   } = req.params;
-  const delivery = await Delivery.findById(id);
+  const delivery = await Delivery.findById(id).populate("package_id");
   if (!delivery) {
     logger.warn(`Delivery with ID ${id} not found`);
     return res.status(404).json({

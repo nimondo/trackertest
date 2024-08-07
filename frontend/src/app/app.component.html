@@ -17,7 +17,8 @@
         <li class="nav_menu_item" routerLinkActive="active" *ngIf="isLoggedIn && (role == 'driver' || role == 'admin')">
           <a routerLink="/driver" class="nav_menu_link">Driver</a>
         </li>
-        <li class="nav_menu_item" routerLinkActive="active" *ngIf="isLoggedIn && role == 'admin'">
+        <li class="nav_menu_item" routerLinkActive="active"
+          *ngIf="isLoggedIn && (role == 'driver' || role == 'admin'|| role=='customer')">
           <a routerLink="/admin" class="nav_menu_link">Admin</a>
         </li>
         <li class="nav_menu_item" routerLinkActive="active"
@@ -44,3 +45,8 @@
   <hr />
 </header>
 <router-outlet></router-outlet>
+<!-- <footer class="footer bg-light  mt-5 p-4">
+  <div class="container text-center">
+    <p class="m-0">GOZEM API</p>
+  </div>
+</footer> -->

@@ -54,7 +54,7 @@ describe('Package Controller', () => {
     });
 
     afterAll(async () => {
-        await mongoose.connection.db.dropDatabase();
+        // await mongoose.connection.db.dropDatabase();
         await mongoose.connection.close();
         await server.close();
     });

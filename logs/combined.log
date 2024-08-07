@@ -544,3 +544,639 @@
 2024-08-03T02:58:55.268Z [[32minfo[39m]: OPTIONS /api/auth/login
 2024-08-03T02:58:55.274Z [[32minfo[39m]: POST /api/auth/login
 2024-08-03T02:58:55.351Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-03T20:43:27.175Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T20:43:27.222Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T20:43:27.355Z [[32minfo[39m]: POST /api/packages
+2024-08-03T20:43:27.364Z [[32minfo[39m]: Package created with ID: 9f31d029-e05c-4c57-8746-a94bda04fb55
+2024-08-03T20:43:27.390Z [[32minfo[39m]: GET /api/packages
+2024-08-03T20:43:27.398Z [[31merror[39m]: 500 - Package.find(...).sort is not a function
+2024-08-03T20:43:27.416Z [[32minfo[39m]: GET /api/packages/1
+2024-08-03T20:43:27.421Z [[31merror[39m]: 500 - Package.findById(...).populate is not a function
+2024-08-03T20:43:27.437Z [[32minfo[39m]: PUT /api/packages/1
+2024-08-03T20:43:27.460Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-03T20:43:27.474Z [[32minfo[39m]: DELETE /api/packages/1
+2024-08-03T20:43:27.481Z [[33mwarn[39m]: Package with ID 1 not found
+2024-08-03T20:43:27.804Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-03T20:43:27.895Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-03T20:43:28.008Z [[32m'info'[39m]: User created successfully
+2024-08-03T20:44:32.660Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T20:44:42.989Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T20:44:56.422Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T20:44:56.558Z [[32minfo[39m]: POST /api/deliveries
+2024-08-03T20:44:56.571Z [[32minfo[39m]: Created new delivery with ID: a2688922-99fb-443d-9f27-e66dab3f516d
+2024-08-03T20:44:56.601Z [[32minfo[39m]: GET /api/deliveries
+2024-08-03T20:44:56.604Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T20:44:56.613Z [[32minfo[39m]: GET /api/deliveries/1
+2024-08-03T20:44:56.616Z [[32minfo[39m]: Fetched delivery with ID 1
+2024-08-03T20:44:56.628Z [[32minfo[39m]: PUT /api/deliveries/1
+2024-08-03T20:44:56.631Z [[32minfo[39m]: Updated delivery with ID 1
+2024-08-03T20:44:56.641Z [[32minfo[39m]: DELETE /api/deliveries/1
+2024-08-03T20:44:56.643Z [[32minfo[39m]: Deleted delivery with ID 1
+2024-08-03T20:44:56.670Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-03T20:44:56.776Z [[32m'info'[39m]: Connection to MongoDB successful!
+2024-08-03T20:44:56.862Z [[32m'info'[39m]: POST /api/auth/signup
+2024-08-03T20:44:56.974Z [[32m'info'[39m]: User created successfully
+2024-08-03T20:58:15.556Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-03T20:58:15.579Z [[32minfo[39m]: POST /api/auth/login
+2024-08-03T20:58:15.590Z [[33mwarn[39m]: User with email znimed@gmail.com not found
+2024-08-03T20:58:36.353Z [[32minfo[39m]: OPTIONS /api/auth/signup
+2024-08-03T20:58:36.358Z [[32minfo[39m]: POST /api/auth/signup
+2024-08-03T20:58:36.452Z [[32minfo[39m]: User created successfully
+2024-08-03T20:58:41.911Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-03T20:58:41.916Z [[32minfo[39m]: POST /api/auth/login
+2024-08-03T20:58:42.004Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-03T21:06:29.394Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-03T21:06:29.443Z [[32minfo[39m]: POST /api/auth/login
+2024-08-03T21:06:29.564Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-03T21:07:18.033Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T21:07:18.038Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T21:07:18.041Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:07:18.046Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T21:07:18.054Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T21:07:18.057Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:07:25.612Z [[32minfo[39m]: OPTIONS /api/packages
+2024-08-03T21:07:25.616Z [[32minfo[39m]: POST /api/packages
+2024-08-03T21:07:25.662Z [[32minfo[39m]: Package created with ID: 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:07:28.423Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T21:07:28.430Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T21:07:28.453Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:07:28.457Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T21:07:28.469Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T21:07:28.473Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:07:31.468Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:07:31.475Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:07:37.154Z [[32minfo[39m]: OPTIONS /api/deliveries
+2024-08-03T21:07:37.174Z [[32minfo[39m]: POST /api/deliveries
+2024-08-03T21:07:37.201Z [[32minfo[39m]: Created new delivery with ID: 10b3faac-dcc6-4727-bd00-57d6eae65bd9
+2024-08-03T21:07:37.214Z [[32minfo[39m]: OPTIONS /api/packages/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:07:37.220Z [[32minfo[39m]: PUT /api/packages/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:07:37.232Z [[32minfo[39m]: Updated package with ID 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:16:10.213Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T21:16:10.219Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T21:16:10.223Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:16:10.227Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T21:16:10.236Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T21:16:10.240Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:16:13.895Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:16:13.901Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T21:16:13.909Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T21:16:13.913Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:16:15.691Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T21:16:15.698Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:16:15.704Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:16:20.324Z [[32minfo[39m]: OPTIONS /api/deliveries
+2024-08-03T21:16:20.371Z [[32minfo[39m]: POST /api/deliveries
+2024-08-03T21:16:20.381Z [[32minfo[39m]: Created new delivery with ID: bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-03T21:16:20.399Z [[32minfo[39m]: OPTIONS /api/packages/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:16:20.409Z [[32minfo[39m]: PUT /api/packages/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:16:20.419Z [[32minfo[39m]: Updated package with ID 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-03T21:16:27.383Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-03T21:16:27.392Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-03T21:16:27.395Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:16:27.399Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T21:16:27.403Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T21:16:27.406Z [[32minfo[39m]: Fetched packages
+2024-08-03T21:16:31.591Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-03T21:16:31.595Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-03T21:16:31.598Z [[32minfo[39m]: Fetched all deliveries
+2024-08-03T21:16:31.600Z [[32minfo[39m]: Fetched packages
+2024-08-04T07:38:36.456Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-04T07:38:44.145Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-04T07:38:59.572Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-04T07:38:59.604Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-04T07:38:59.663Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-04T07:38:59.732Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-04T07:38:59.777Z [[32minfo[39m]: Fetched packages
+2024-08-04T07:38:59.798Z [[32minfo[39m]: Fetched all deliveries
+2024-08-04T07:48:32.527Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-04T07:48:34.686Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-04T07:48:34.709Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-04T07:48:34.725Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-04T07:48:34.746Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-04T07:48:34.781Z [[32minfo[39m]: Fetched packages
+2024-08-04T07:48:34.793Z [[32minfo[39m]: Fetched deliveries
+2024-08-04T07:48:55.365Z [[32minfo[39m]: OPTIONS /api/packages/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-04T07:48:55.421Z [[32minfo[39m]: GET /api/packages/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-04T07:48:55.460Z [[32minfo[39m]: Fetched package with ID 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-04T07:49:21.287Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-04T07:49:21.298Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-04T07:49:21.310Z [[32minfo[39m]: GET /api/packages?page=0
+2024-08-04T07:49:21.320Z [[32minfo[39m]: GET /api/deliveries?page=0
+2024-08-04T07:49:21.351Z [[32minfo[39m]: Fetched packages
+2024-08-04T07:49:21.359Z [[32minfo[39m]: Fetched deliveries
+2024-08-05T10:28:18.727Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-05T10:30:02.465Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-05T11:12:02.318Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-05T11:12:18.815Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-05T17:43:35.156Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-05T17:43:47.916Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-05T17:43:47.945Z [[32minfo[39m]: POST /api/auth/login
+2024-08-05T17:43:48.098Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-06T13:46:50.879Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T13:54:26.327Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-06T13:54:26.363Z [[32minfo[39m]: POST /api/auth/login
+2024-08-06T13:54:26.535Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-06T13:58:22.671Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-06T13:58:22.676Z [[32minfo[39m]: POST /api/auth/login
+2024-08-06T13:58:22.746Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-06T14:12:41.766Z [[32minfo[39m]: OPTIONS /api/deliveries/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:12:41.794Z [[32minfo[39m]: OPTIONS /api/deliveries/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:12:59.654Z [[32minfo[39m]: OPTIONS /api/deliveries/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:13:15.724Z [[32minfo[39m]: OPTIONS /api/deliveries/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:13:32.987Z [[32minfo[39m]: OPTIONS /api/packages?page=0
+2024-08-06T14:13:32.991Z [[32minfo[39m]: OPTIONS /api/deliveries?page=0
+2024-08-06T14:17:34.115Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T14:49:08.385Z [[32minfo[39m]: OPTIONS /api/deliveries/
+2024-08-06T14:49:11.183Z [[32minfo[39m]: OPTIONS /api/deliveries/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:49:11.234Z [[32minfo[39m]: OPTIONS /api/deliveries/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:50:04.974Z [[32minfo[39m]: OPTIONS /api/delivery/
+2024-08-06T14:50:04.982Z [[32minfo[39m]: GET /api/delivery/
+2024-08-06T14:50:05.104Z [[32minfo[39m]: Fetched deliveries
+2024-08-06T14:50:12.405Z [[32minfo[39m]: OPTIONS /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:50:12.409Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:50:12.418Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-06T14:50:12.429Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T14:50:12.433Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-06T16:00:42.741Z [[32minfo[39m]: OPTIONS /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T16:00:42.759Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-06T16:00:42.794Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-06T17:45:12.020Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T17:45:26.433Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T17:45:35.672Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T17:45:37.869Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T17:45:46.608Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-06T17:50:23.854Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-06T17:50:23.862Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-06T17:50:23.868Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-06T17:50:23.886Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-06T17:50:23.924Z [[32minfo[39m]: Fetched deliveries
+2024-08-06T17:50:23.954Z [[32minfo[39m]: Fetched packages
+2024-08-06T17:50:37.969Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-06T17:50:37.990Z [[32minfo[39m]: POST /api/auth/login
+2024-08-06T17:50:38.072Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-06T18:11:06.755Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-06T18:11:06.759Z [[32minfo[39m]: POST /api/auth/login
+2024-08-06T18:11:06.854Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-06T18:15:24.898Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-06T18:15:24.902Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-06T18:15:24.903Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-06T18:15:24.909Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-06T18:15:24.924Z [[32minfo[39m]: Fetched packages
+2024-08-06T18:15:24.929Z [[32minfo[39m]: Fetched deliveries
+2024-08-06T18:18:55.460Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-06T18:18:55.464Z [[32minfo[39m]: POST /api/auth/login
+2024-08-06T18:18:55.549Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-06T18:18:59.566Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-06T18:18:59.569Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-06T18:18:59.573Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-06T18:18:59.579Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-06T18:18:59.591Z [[32minfo[39m]: Fetched packages
+2024-08-06T18:18:59.598Z [[32minfo[39m]: Fetched deliveries
+2024-08-06T19:29:38.727Z [[32minfo[39m]: OPTIONS /api/package
+2024-08-06T19:29:38.756Z [[32minfo[39m]: POST /api/package
+2024-08-06T19:29:38.914Z [[32minfo[39m]: Package created with ID: 8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-06T19:29:42.718Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-06T19:29:42.723Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-06T19:29:42.736Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-06T19:29:42.749Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-06T19:29:42.763Z [[32minfo[39m]: Fetched packages
+2024-08-06T19:29:42.805Z [[32minfo[39m]: Fetched deliveries
+2024-08-06T19:30:14.327Z [[32minfo[39m]: OPTIONS /api/package
+2024-08-06T19:30:14.341Z [[32minfo[39m]: POST /api/package
+2024-08-06T19:30:14.355Z [[32minfo[39m]: Package created with ID: 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-06T19:30:18.107Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-06T19:30:18.116Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-06T19:30:18.120Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-06T19:30:18.126Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-06T19:30:18.146Z [[32minfo[39m]: Fetched packages
+2024-08-06T19:30:18.156Z [[32minfo[39m]: Fetched deliveries
+2024-08-06T19:30:30.842Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-06T19:30:30.849Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-06T19:30:30.861Z [[32minfo[39m]: Fetched packages
+2024-08-06T19:30:40.518Z [[32minfo[39m]: OPTIONS /api/delivery
+2024-08-06T19:30:40.524Z [[32minfo[39m]: POST /api/delivery
+2024-08-06T19:30:40.543Z [[32minfo[39m]: Created new delivery with ID: 481d88fc-56ce-4e97-a0ca-fcf8309bc556
+2024-08-06T19:30:40.595Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-06T19:30:40.610Z [[32minfo[39m]: PUT /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-06T19:30:40.673Z [[32minfo[39m]: Updated package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T10:52:01.827Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T10:52:01.905Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T10:52:01.985Z [[32minfo[39m]: Fetched packages
+2024-08-07T10:52:13.449Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T10:52:13.452Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T10:52:13.460Z [[32minfo[39m]: Fetched packages
+2024-08-07T10:54:08.638Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T10:54:08.642Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T10:54:08.656Z [[32minfo[39m]: Fetched packages
+2024-08-07T10:54:42.824Z [[32minfo[39m]: OPTIONS /api/delivery
+2024-08-07T10:54:42.835Z [[32minfo[39m]: POST /api/delivery
+2024-08-07T10:54:42.855Z [[32minfo[39m]: Created new delivery with ID: 7bc2342b-ba09-462e-b27f-f5fe87d825c3
+2024-08-07T10:54:42.863Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T10:54:42.867Z [[32minfo[39m]: PUT /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T10:54:42.875Z [[32minfo[39m]: Updated package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T10:56:19.237Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T10:56:19.241Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T10:56:19.245Z [[32minfo[39m]: Fetched packages
+2024-08-07T10:56:24.046Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T10:56:24.072Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:12:56.029Z [[32minfo[39m]: OPTIONS /api/delivery
+2024-08-07T11:12:56.033Z [[32minfo[39m]: POST /api/delivery
+2024-08-07T11:12:56.039Z [[32minfo[39m]: Created new delivery with ID: b994cace-dfe5-4a11-a499-fc9f5119b50c
+2024-08-07T11:12:56.048Z [[32minfo[39m]: OPTIONS /api/package/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T11:12:56.058Z [[32minfo[39m]: PUT /api/package/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T11:12:56.068Z [[32minfo[39m]: Updated package with ID 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T11:12:58.816Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:12:58.818Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:12:58.819Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:12:58.822Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:12:58.836Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:12:58.840Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:13:10.541Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:10.546Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:10.559Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:11.612Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:11.615Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:13.337Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:13.342Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:14.101Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:14.102Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:20.696Z [[32minfo[39m]: OPTIONS /api/package/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:20.700Z [[32minfo[39m]: GET /api/package/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:20.722Z [[33mwarn[39m]: Package with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7 not found
+2024-08-07T11:13:22.252Z [[32minfo[39m]: GET /api/package/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:13:22.256Z [[33mwarn[39m]: Package with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7 not found
+2024-08-07T11:25:35.592Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:25:35.595Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:25:35.597Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:25:35.601Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:25:35.606Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:25:35.614Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:25:43.899Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:25:43.903Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:25:43.907Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:25:44.681Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:25:44.689Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:26:06.532Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:26:06.536Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:26:06.539Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T11:26:09.343Z [[32minfo[39m]: OPTIONS /api/delivery/
+2024-08-07T11:26:09.347Z [[32minfo[39m]: GET /api/delivery/
+2024-08-07T11:26:09.355Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:26:10.939Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:26:10.942Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:26:10.948Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:26:10.950Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:26:10.953Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:26:10.963Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:28:34.938Z [[32minfo[39m]: OPTIONS /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T11:28:34.943Z [[32minfo[39m]: GET /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T11:28:34.981Z [[32minfo[39m]: Fetched package with ID 8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T11:31:25.686Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T11:31:25.693Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T11:31:25.784Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T11:31:30.923Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:32:13.641Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T11:32:13.645Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T11:32:13.719Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T11:33:06.042Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:33:06.047Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:33:06.052Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:33:06.054Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:33:06.058Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:33:06.066Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:34:00.518Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T11:34:00.522Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T11:34:00.599Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T11:34:06.928Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:34:06.932Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:34:06.935Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:34:06.939Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:34:06.942Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:34:06.953Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:34:11.719Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:34:11.725Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:34:11.729Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:34:11.737Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:34:44.768Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:34:44.771Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:34:44.773Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:34:44.776Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:34:44.781Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:34:44.785Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:34:46.562Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:34:46.574Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:34:51.631Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:34:51.635Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:34:51.639Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:34:51.643Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:34:51.646Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:34:51.653Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:34:53.773Z [[32minfo[39m]: OPTIONS /api/delivery/
+2024-08-07T11:34:53.776Z [[32minfo[39m]: GET /api/delivery/
+2024-08-07T11:34:53.792Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:37:37.945Z [[32minfo[39m]: OPTIONS /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T11:37:37.950Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T11:37:37.953Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T11:37:38.089Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T11:37:38.094Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T11:49:38.846Z [[32minfo[39m]: OPTIONS /api/package/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T11:49:38.875Z [[32minfo[39m]: GET /api/package/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T11:49:38.888Z [[33mwarn[39m]: Package with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T11:49:51.360Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T11:49:51.365Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:49:51.372Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T11:49:51.378Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:49:51.382Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:49:51.397Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T11:49:55.374Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T11:49:55.380Z [[32minfo[39m]: Fetched packages
+2024-08-07T11:49:55.384Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T11:49:55.392Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:07:35.106Z [[32minfo[39m]: OPTIONS /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T12:07:35.117Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T12:07:35.124Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T12:07:35.130Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T12:07:35.133Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T12:09:05.615Z [[32minfo[39m]: OPTIONS /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T12:09:05.625Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T12:09:05.629Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T12:09:05.725Z [[32minfo[39m]: GET /api/delivery/36711adc-a6b2-4f3e-9a03-a26e8a2ada27
+2024-08-07T12:09:05.734Z [[33mwarn[39m]: Delivery with ID 36711adc-a6b2-4f3e-9a03-a26e8a2ada27 not found
+2024-08-07T12:10:02.329Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:10:02.334Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:10:02.345Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:10:02.350Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:10:02.355Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:10:02.376Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:10:10.226Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:10:10.230Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:10:10.234Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:10:11.171Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:10:11.175Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:10:52.636Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:10:52.647Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:10:52.659Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:10:52.689Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:10:52.710Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:10:52.716Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:11:02.156Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:11:02.162Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:11:02.168Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:11:03.062Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:11:03.068Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:11:48.171Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-07T12:12:35.848Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-07T12:12:43.343Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-07T12:13:32.042Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:32.052Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:32.124Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:37.622Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:37.627Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:37.643Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:45.984Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:46.023Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:46.038Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:46.302Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:13:46.342Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:29.750Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:29.758Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:29.774Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:31.003Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:31.018Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:33.869Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:33.878Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:35.157Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:35.163Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:16:35.173Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:11.893Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:11.985Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:11.999Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:12.143Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:12.168Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:19.840Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:19.882Z [[32minfo[39m]: PUT /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:19.917Z [[32minfo[39m]: Updated delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:25.052Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:25.059Z [[32minfo[39m]: PUT /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:25.066Z [[32minfo[39m]: Updated delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:27.630Z [[32minfo[39m]: PUT /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:27.637Z [[32minfo[39m]: Updated delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:28.176Z [[32minfo[39m]: PUT /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:18:28.182Z [[31merror[39m]: 500 - Validation failed: status: `location_changed` is not a valid enum value for path `status`.
+2024-08-07T12:36:03.094Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:03.115Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:03.233Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:03.274Z [[32minfo[39m]: GET /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:03.335Z [[32minfo[39m]: Fetched delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:08.434Z [[32minfo[39m]: OPTIONS /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:08.446Z [[32minfo[39m]: PUT /api/delivery/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:08.479Z [[32minfo[39m]: Updated delivery with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:36:30.131Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:36:30.139Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:36:30.144Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:36:30.163Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:36:30.208Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:36:30.221Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:36:37.122Z [[32minfo[39m]: OPTIONS /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T12:36:37.130Z [[32minfo[39m]: GET /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T12:36:37.140Z [[32minfo[39m]: Fetched package with ID 8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T12:36:39.757Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:36:39.763Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:36:39.768Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:36:39.776Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:36:39.784Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:36:39.807Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:37:32.739Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:37:32.743Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:37:32.751Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:37:32.757Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:37:32.792Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:37:32.804Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:37:39.785Z [[32minfo[39m]: OPTIONS /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T12:37:39.791Z [[32minfo[39m]: GET /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T12:37:39.799Z [[32minfo[39m]: Fetched package with ID 8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T12:58:34.878Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:58:34.901Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:58:34.912Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:58:34.945Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:58:34.970Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:58:34.983Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:59:00.776Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:59:00.781Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:59:00.794Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:59:00.809Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:59:00.812Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:59:00.818Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:59:16.681Z [[32minfo[39m]: OPTIONS /api/package/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:59:16.693Z [[32minfo[39m]: GET /api/package/bfe36a3a-ddd2-46a9-a6eb-24883b0008f7
+2024-08-07T12:59:16.699Z [[33mwarn[39m]: Package with ID bfe36a3a-ddd2-46a9-a6eb-24883b0008f7 not found
+2024-08-07T12:59:28.540Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T12:59:28.750Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T12:59:28.753Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T12:59:28.759Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T12:59:28.785Z [[32minfo[39m]: Fetched packages
+2024-08-07T12:59:28.806Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T12:59:38.534Z [[32minfo[39m]: OPTIONS /api/package/10b3faac-dcc6-4727-bd00-57d6eae65bd9
+2024-08-07T12:59:38.539Z [[32minfo[39m]: GET /api/package/10b3faac-dcc6-4727-bd00-57d6eae65bd9
+2024-08-07T12:59:38.550Z [[33mwarn[39m]: Package with ID 10b3faac-dcc6-4727-bd00-57d6eae65bd9 not found
+2024-08-07T16:24:11.979Z [[32minfo[39m]: Connection to MongoDB successful!
+2024-08-07T16:25:25.603Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T16:25:25.638Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T16:25:25.817Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T16:25:36.006Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T16:25:36.010Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T16:25:36.021Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T16:25:36.026Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T16:25:36.070Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T16:25:36.077Z [[32minfo[39m]: Fetched packages
+2024-08-07T16:25:43.471Z [[32minfo[39m]: OPTIONS /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T16:25:43.476Z [[32minfo[39m]: GET /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T16:25:43.490Z [[32minfo[39m]: Fetched package with ID 8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T16:25:54.482Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T16:25:54.485Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T16:25:54.491Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T16:25:54.496Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T16:25:54.503Z [[32minfo[39m]: Fetched packages
+2024-08-07T16:25:54.507Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T16:26:01.642Z [[32minfo[39m]: OPTIONS /api/package/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T16:26:01.646Z [[32minfo[39m]: GET /api/package/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T16:26:01.659Z [[32minfo[39m]: Fetched package with ID 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T16:27:05.801Z [[32minfo[39m]: OPTIONS /api/package/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T16:27:05.805Z [[32minfo[39m]: GET /api/package/8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T16:27:05.811Z [[32minfo[39m]: Fetched package with ID 8dfbbc72-ce97-43c9-925b-1503ab3b29da
+2024-08-07T16:57:26.780Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T16:57:26.788Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T16:57:26.795Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T16:57:26.803Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T16:57:26.816Z [[32minfo[39m]: Fetched packages
+2024-08-07T16:57:26.824Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T16:57:34.184Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T16:57:34.189Z [[32minfo[39m]: GET /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T16:57:34.201Z [[32minfo[39m]: Fetched package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:11:52.426Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:11:52.430Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:11:52.441Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:11:52.444Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:11:52.458Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:11:52.462Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:12:01.875Z [[32minfo[39m]: OPTIONS /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T17:12:01.880Z [[32minfo[39m]: GET /api/package/8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T17:12:01.887Z [[32minfo[39m]: Fetched package with ID 8f17fb8a-a6d8-463b-800a-396a93057e34
+2024-08-07T17:12:32.412Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:12:32.418Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:12:32.426Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:12:32.428Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:12:32.437Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:12:32.443Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:12:39.685Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:12:39.713Z [[32minfo[39m]: GET /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:12:39.720Z [[32minfo[39m]: Fetched package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:13:28.876Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:13:28.923Z [[32minfo[39m]: GET /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:13:28.932Z [[32minfo[39m]: Fetched package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:14:11.097Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:14:11.134Z [[32minfo[39m]: GET /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:14:11.143Z [[32minfo[39m]: Fetched package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:17:53.013Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:17:53.021Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:17:53.030Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:17:53.034Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:17:53.050Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:17:53.054Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:18:02.381Z [[32minfo[39m]: OPTIONS /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:18:02.385Z [[32minfo[39m]: GET /api/package/70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:18:02.393Z [[32minfo[39m]: Fetched package with ID 70c97115-de59-4d6f-85c2-d243a597dd67
+2024-08-07T17:19:20.672Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:19:20.680Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:19:20.683Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:19:20.688Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:19:20.698Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:19:20.703Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:22:03.417Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:22:03.430Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:22:03.432Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:22:03.435Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:22:03.445Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:22:03.450Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:22:15.051Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T17:22:15.062Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T17:22:15.156Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T17:22:22.741Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:22:22.744Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:22:22.748Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:22:22.751Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:22:22.758Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:22:22.762Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:53:04.609Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:53:04.615Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:53:04.619Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:53:04.622Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:53:04.629Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:53:04.636Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:54:25.850Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:54:25.871Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:54:25.924Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:54:25.935Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:54:25.942Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:54:25.949Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:54:30.860Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:54:30.869Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:54:30.894Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:54:30.900Z [[32minfo[39m]: Fetched deliveries
+2024-08-07T17:54:45.860Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T17:54:45.865Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T17:54:45.950Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T17:55:48.085Z [[32minfo[39m]: OPTIONS /api/auth/login
+2024-08-07T17:55:48.120Z [[32minfo[39m]: POST /api/auth/login
+2024-08-07T17:55:48.234Z [[32minfo[39m]: User znimed@gmail.com logged in successfully
+2024-08-07T17:57:04.544Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:57:04.550Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:57:04.553Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:57:04.556Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:57:04.562Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:57:15.485Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:57:15.493Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:57:15.501Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:57:15.504Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:57:15.509Z [[32minfo[39m]: Fetched packages
+2024-08-07T17:59:35.349Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T17:59:35.355Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T17:59:35.362Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T17:59:35.367Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T17:59:35.377Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:14:50.409Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T18:14:50.412Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T18:14:50.413Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:14:50.419Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:14:50.424Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:15:14.820Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T18:15:14.827Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T18:15:14.844Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:15:14.847Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:15:14.854Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:15:17.317Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:15:17.319Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:15:17.324Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:15:32.076Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T18:15:32.080Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:15:32.088Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:15:32.103Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T18:15:32.110Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:26:03.844Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T18:26:03.848Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T18:26:03.851Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:26:03.859Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:26:03.864Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:27:29.623Z [[32minfo[39m]: OPTIONS /api/package
+2024-08-07T18:27:29.634Z [[32minfo[39m]: POST /api/package
+2024-08-07T18:27:29.762Z [[32minfo[39m]: Package created with ID: b629aae5-ba7f-4ea7-a5fd-761a957274e0
+2024-08-07T18:27:34.072Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T18:27:34.106Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T18:27:34.120Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:27:34.125Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:27:34.137Z [[32minfo[39m]: Fetched packages
+2024-08-07T18:53:30.373Z [[32minfo[39m]: OPTIONS /api/package?page=0
+2024-08-07T18:53:30.395Z [[32minfo[39m]: GET /api/package?page=0
+2024-08-07T18:53:30.402Z [[32minfo[39m]: OPTIONS /api/delivery?page=0
+2024-08-07T18:53:30.412Z [[32minfo[39m]: GET /api/delivery?page=0
+2024-08-07T18:53:30.421Z [[32minfo[39m]: Fetched packages

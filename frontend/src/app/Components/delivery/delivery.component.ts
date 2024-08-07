@@ -8,8 +8,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Socket } from 'ngx-socket-io';
 import { ErrorsStateMatcher } from 'src/app/Error-state-matcher';
+import { AuthService } from 'src/app/Services/auth.service';
 import { DeliveryService } from 'src/app/Services/delivery.service';
 import { PackageService } from 'src/app/Services/package.service';
+import {
+  validateCoordinates,
+} from 'src/app/utils/validators'; // Import the new validator
 import { v4 as uuid4 } from 'uuid';
 
 @Component({
@@ -19,11 +23,13 @@ import { v4 as uuid4 } from 'uuid';
 })
 export class DeliveryComponent {
   packages!: any;
+  userId: any = "";
   constructor(
     private deliveryService: DeliveryService,
     private packageService: PackageService,
     private _snackBar: MatSnackBar,
-    private socket: Socket
+    private socket: Socket,
+    private authService: AuthService
   ) {}
 
   getAllPackages() {
@@ -34,6 +40,7 @@ export class DeliveryComponent {
   }
   ngOnInit(): void {
     this.getAllPackages();
+    this.userId = this.authService.getUserId();
   }
 
   //Declaration
@@ -45,7 +52,7 @@ export class DeliveryComponent {
   //form group
   form: FormGroup = new FormGroup({
     package_id: new FormControl('', [Validators.required]),
-    location: new FormControl('', [Validators.required]),
+    location: new FormControl('', [Validators.required, validateCoordinates]), // Use the validator here
     // status: new FormControl('', [Validators.required]),
   });
 
@@ -70,9 +77,10 @@ export class DeliveryComponent {
       const deliveryData = {
         _id: uuid4(),
         package_id: this.package_id?.value,
+        driver_id: this.userId,
         location: {
-          lat: this.location?.value.split(',')[0],
-          long: this.location?.value.split(',')[1],
+          lat: parseFloat(this.location?.value.split(',')[0]),
+          long: parseFloat(this.location?.value.split(',')[1]),
         },
         status: 'open',
       };
@@ -92,10 +100,10 @@ export class DeliveryComponent {
                 'Your delivery has been created successfully',
                 '✔️'
               );
+              setTimeout(() => (window.location.href = '/admin'), 2000);
             });
         }
       });
-
       // setTimeout(() => {
       //   window.location.href = '/admin';
       //   this._snackBar.open(
@@ -105,7 +113,7 @@ export class DeliveryComponent {
       // }, 2000);
     } else {
       console.log(this.form);
-      this._snackBar.open('Enter a valid informations !!!', '❌');
+      this._snackBar.open('Enter valid information !!!', '❌');
     }
   }
 }

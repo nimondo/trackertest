@@ -3,7 +3,26 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const logger = require('../logger');
 const handleAsync = require('../utils/handleAsync');
-const validator = require('validator'); // Importer le module de validation
+const validator = require('validator');
+const passwordValidator = require("password-validator");
+const passwdSchema = new passwordValidator();
+passwdSchema
+  .is()
+  .min(8) // Minimum length 8
+  .is()
+  .max(100) // Maximum length 100
+  .has()
+  .uppercase() // Must have uppercase letters
+  .has()
+  .lowercase() // Must have lowercase letters
+  .has()
+  .digits() // Must have digits
+  .has()
+  .not()
+  .spaces() // Should not have spaces
+  .is()
+  .not()
+  .oneOf(["Passw0rd", "Password123"]);
 
 exports.signup = handleAsync(async (req, res, next) => {
   const {
@@ -31,6 +50,11 @@ exports.signup = handleAsync(async (req, res, next) => {
     });
   }
 
+  if (!passwdSchema.validate(password)) {
+    return res.status(400).json({
+      error: "Invalid password",
+    });
+  }
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = new User({
     email,
