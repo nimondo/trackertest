@@ -14,7 +14,7 @@ const deliverySchema = new mongoose.Schema({
     type: String,
     ref: "Package",
   }],
-  driver_id: {
+  userId: {
     type: String,
     ref: 'User',
     required: false

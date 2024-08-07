@@ -77,7 +77,7 @@ export class DeliveryComponent {
       const deliveryData = {
         _id: uuid4(),
         package_id: this.package_id?.value,
-        driver_id: this.userId,
+        userId: this.userId,
         location: {
           lat: parseFloat(this.location?.value.split(',')[0]),
           long: parseFloat(this.location?.value.split(',')[1]),

@@ -1,15 +1,17 @@
 const Delivery = require('../models/delivery');
 const logger = require('../logger');
 const handleAsync = require('../utils/handleAsync');
+const JwtUtils = require("../utils/jwtUtils");
 const {
   v4: uuidv4
 } = require('uuid');
 
 exports.getAllDeliveries = handleAsync(async (req, res) => {
-  const user = req.query.user;
-  const filter = user ? {
-    user
-  } : {};
+  const token = req.headers.authorization.split(" ")[1];
+  let decodedToken = JwtUtils.decodeToken(token);
+  let filter = {};
+  if (decodedToken.token != "admin")
+    filter.userId = decodedToken.userId;
 
   const pageNumber = parseInt(req.query.page, 10) || 0;
   const limit = parseInt(req.query.limit, 10) || 12;

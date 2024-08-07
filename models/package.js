@@ -74,7 +74,7 @@ const packageSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  customer_id: {
+  userId: {
     type: String,
     ref: 'User',
     required: false

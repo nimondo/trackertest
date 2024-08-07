@@ -125,7 +125,7 @@ export class PackageComponent {
           lat: parseFloat(this.to_location?.value.split(',')[0]),
           long: parseFloat(this.to_location?.value.split(',')[1]),
         },
-        customer_id: this.userId,
+        userId: this.userId,
       };
       console.log('package', packageData);
       this.packageService.Create(packageData).subscribe(() => {
