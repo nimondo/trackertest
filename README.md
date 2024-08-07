@@ -44,11 +44,11 @@ Create a package tracking web application suite consisting of the following:
 
 Clone the repository :
 
-    $ git clone https://github.com/nimondo/testapi
+    $ git clone https://github.com/nimondo/trackertest
 
 cd to the directory:
 
-    $ cd testapi
+    $ cd trackertest
 
 Install libraries :
 
