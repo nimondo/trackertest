@@ -90,6 +90,11 @@
             </div>
           </div>
           <!-- Delivery Details -->
+          <div class="row d-flex justify-content-center" *ngIf="errorMessage">
+            <div class="alert alert-danger" role="alert">
+              Package not found
+            </div>
+          </div>
           <div class="row d-flex justify-content-center" *ngIf="delivery">
             <div class="col-12">
               <h1>Delivery Details</h1>

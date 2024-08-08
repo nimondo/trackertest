@@ -21,6 +21,7 @@ import { PackageService } from 'src/app/Services/package.service';
   styleUrls: ['./tracker.component.css'],
 })
 export class TrackerComponent {
+  errorMessage: string = '';
   loading = false;
   @ViewChild(GoogleMap, { static: false }) map!: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false }) infoWindow!: MapInfoWindow;
@@ -202,6 +203,13 @@ export class TrackerComponent {
           color: 'red',
         });
         this.addMarker(this.markerdata);
+        this.errorMessage = '';
+      },
+      error: (err) => {
+        this.errorMessage = err.message;
+        this.markers = []; // Clear markers on error
+        this.package = null;
+        this.delivery = null;
       },
     });
   }

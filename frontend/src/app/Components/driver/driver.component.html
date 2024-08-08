@@ -21,6 +21,11 @@
                 </div>
               </form>
             </div>
+            <div class="row d-flex justify-content-center" *ngIf="errorMessage">
+              <div class="alert alert-danger" role="alert">
+                Delivery not found
+              </div>
+            </div>
             <div class="row d-flex justify-content-center">
               <div class="col-12 table-responsive">
                 <h1 *ngIf="delivery">Delivery Details</h1>

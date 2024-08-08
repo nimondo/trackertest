@@ -28,6 +28,7 @@ import { DeliveryService } from 'src/app/Services/delivery.service';
   styleUrls: ['./driver.component.css'],
 })
 export class DriverComponent implements OnInit, OnDestroy {
+  errorMessage: string = '';
   loading = false;
   @ViewChild(GoogleMap, { static: false }) map!: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false }) infoWindow!: MapInfoWindow;
@@ -139,6 +140,14 @@ export class DriverComponent implements OnInit, OnDestroy {
           });
         });
         this.addMarker(this.markerData);
+        this.errorMessage = '';
+        
+      },
+      error: (err) => {
+        this.errorMessage = err.message;
+        this.markers = []; // Clear markers on error
+        this.packages = null;
+        this.delivery = null;
       },
     });
   }
