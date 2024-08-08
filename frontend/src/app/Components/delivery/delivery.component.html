@@ -29,10 +29,10 @@
               <input matInput type="location" id="location" placeholder="Enter a valid location"
                 formControlName="location" [errorStateMatcher]="matcher" name="location" required />
               <mat-error *ngIf="
-                  location?.hasError('location') &&
+                  location?.hasError('invalidFormat') &&
                   !location?.hasError('required')
                 ">
-                Please enter a valid <strong>location</strong>
+                Please enter a valid <strong>location. Eg: 1.344, 2.11212 </strong>
               </mat-error>
               <mat-error *ngIf="location?.hasError('required')">
                 Location is <strong>required</strong>

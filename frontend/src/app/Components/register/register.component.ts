@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 import { ErrorsStateMatcher } from 'src/app/Error-state-matcher';
 import { UserService } from 'src/app/Services/user.service';
 
@@ -23,13 +24,11 @@ export class RegisterComponent {
 
   ngOnInit(): void {}
 
-  //Declaration
-  // check the form is submitted or not yet
+  // Declaration
   isSubmited: boolean = false;
-  // hide attribute for the password input
   hide: boolean = true;
 
-  //form group
+  // Form group
   form: FormGroup = new FormGroup(
     {
       role: new FormControl('', [Validators.required]),
@@ -37,7 +36,7 @@ export class RegisterComponent {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(8),
-        Validators.pattern('(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}'),
+        Validators.pattern('(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}'),
       ]),
       cPassword: new FormControl('', [Validators.required]),
     },
@@ -46,12 +45,9 @@ export class RegisterComponent {
     }
   );
 
-  //get all Form Fields
+  // Get all Form Fields
   get role() {
     return this.form.get('role');
-  }
-  get lastname() {
-    return this.form.get('lastname');
   }
   get email() {
     return this.form.get('email');
@@ -63,12 +59,11 @@ export class RegisterComponent {
     return this.form.get('cPassword');
   }
 
-  // match errors in the submition of form
+  // Match errors in the submission of form
   matcher = new ErrorsStateMatcher();
 
-  // submit fntc
+  // Submit function
   onSubmit() {
-    // TODO: Use EventEmitter with form value
     this.isSubmited = true;
     if (!this.form.invalid) {
       const user = {
@@ -83,11 +78,11 @@ export class RegisterComponent {
       });
     } else {
       console.log(this.form);
-      this._snackBar.open('Enter a valid informations !!!', '❌');
+      this._snackBar.open('Enter valid information!', '❌');
     }
   }
 
-  // check the password and confirm password are matched or not
+  // Check if password and confirm password are matched
   passwordMatch(password: string, confirmPassword: string) {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       const passwordControl = formGroup.get(password);

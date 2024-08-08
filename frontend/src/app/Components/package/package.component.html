@@ -123,10 +123,10 @@
               <input matInput type="text" id="from_location" placeholder="Enter from location (lat, lng)"
                 formControlName="from_location" [errorStateMatcher]="matcher" name="from_location" required />
               <mat-error *ngIf="
-                  from_location?.hasError('from_location') &&
+                  from_location?.hasError('invalidFormat') &&
                   !from_location?.hasError('required')
                 ">
-                Please enter a valid <strong>from location</strong>
+                Please enter a valid <strong>from location. Eg: 1.344, 2.11212 </strong>
               </mat-error>
               <mat-error *ngIf="from_location?.hasError('required')">
                 from location is <strong>required</strong>
@@ -159,10 +159,10 @@
               <input matInput type="text" id="to_address " placeholder="Enter to_address " formControlName="to_address"
                 [errorStateMatcher]="matcher" name="to_address " required />
               <mat-error *ngIf="
-                  to_address?.hasError('to_address ') &&
+                  to_address?.hasError('to_address') &&
                   !to_address?.hasError('required')
                 ">
-                Please enter a valid <strong>to address </strong>
+                Please enter a valid <strong>to address</strong>
               </mat-error>
               <mat-error *ngIf="to_address?.hasError('required')">
                 to address is <strong>required</strong>
@@ -178,13 +178,13 @@
               <input matInput type="text" id="to_location" placeholder="Enter to location (lat, lng)"
                 formControlName="to_location" [errorStateMatcher]="matcher" name="to_location" required />
               <mat-error *ngIf="
-                  to_location?.hasError('to_location') &&
+                  to_location?.hasError('invalidFormat') &&
                   !to_location?.hasError('required')
                 ">
-                Please enter a valid <strong>to location</strong>
+                Please enter a valid <strong>to location. Eg: 1.344, 2.11212</strong>
               </mat-error>
               <mat-error *ngIf="to_location?.hasError('required')">
-                to location is <strong>required</strong>
+                to location is <strong>required </strong>
               </mat-error>
             </mat-form-field>
           </div>
