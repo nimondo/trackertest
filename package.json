@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "GOZEM TEST API",
   "main": "index.js",
+  "engines": {
+    "node": "20.10.0",
+    "npm": "10.2.3"
+  },
   "scripts": {
     "test": "jest",
     "dev": "nodemon index.js",
