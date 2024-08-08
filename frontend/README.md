@@ -1,14 +1,13 @@
-# Secure Angular Authentication Project
-
-This Angular project demonstrates a secure authentication setup with guards, interceptors, services, and secure routing.
+# GOZEM web tracker
+This Angular project demonstrates a secure web tracker setup with guards, interceptors, services, and secure routing.
 
 ## Getting Started
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/secure-angular-auth.git
-   cd secure-angular-auth
+   git clone https://github.com/nimondo/testfront.git
+   cd testfront
    ```
 
 2. Install dependencies and run the development server:
@@ -38,3 +37,7 @@ This Angular project demonstrates a secure authentication setup with guards, int
 ## Secure Routing
 
 - Utilizes Angular routing with guards to secure navigation.
+
+## Track package
+
+- Utilizes socket to update package status

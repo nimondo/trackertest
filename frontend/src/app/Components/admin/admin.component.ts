@@ -21,7 +21,7 @@ export class AdminComponent {
   constructor(
     private deliveryService: DeliveryService,
     private packageService: PackageService,
-    private authService: AuthService
+    private authService: AuthService,
   ) {
     this.getAllPackages();
     this.getAllDeliveries();
