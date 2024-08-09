@@ -34,7 +34,6 @@ exports.getPackageById = handleAsync(async (req, res) => {
 });
 
 exports.getAllPackages = handleAsync(async (req, res) => {
-  const user = req.query.user;
   const token = req.headers.authorization.split(" ")[1];
   let decodedToken = JwtUtils.decodeToken(token);
   let filter = {};

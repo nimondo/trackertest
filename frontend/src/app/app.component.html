@@ -1,52 +1,48 @@
-<header class="container header">
-  <!-- ==== NAVBAR ==== -->
-  <nav class="nav">
-    <div class="logo">
-      <h2 routerLink="/home" style="cursor: pointer">GOZEM TEST</h2>
-    </div>
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-    <div class="nav_menu" id="nav_menu">
-      <button class="close_btn" id="close_btn">
-        <i class="ri-close-fill"></i>
-      </button>
+    <a routerLink="/home" class="logo d-flex align-items-center me-auto">
+      <h1 class="sitename">Gozem</h1>
+    </a>
 
-      <ul class="nav_menu_list">
-        <li class="nav_menu_item" routerLinkActive="active" *ngIf="isLoggedIn">
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li *ngIf="isLoggedIn" routerLinkActive="active">
           <a routerLink="/user" class="nav_menu_link">User</a>
         </li>
-        <li class="nav_menu_item" routerLinkActive="active" *ngIf="isLoggedIn && (role == 'driver' || role == 'admin')">
+        <li routerLinkActive="active" *ngIf="isLoggedIn && (role=='driver' || role=='admin' )">
           <a routerLink="/driver" class="nav_menu_link">Driver</a>
         </li>
-        <li class="nav_menu_item" routerLinkActive="active"
-          *ngIf="isLoggedIn && (role == 'driver' || role == 'admin'|| role=='customer')">
+        <li routerLinkActive="active" *ngIf="isLoggedIn && (role == 'driver' || role == 'admin'|| role=='customer')">
           <a routerLink="/admin" class="nav_menu_link">Admin</a>
         </li>
-        <li class="nav_menu_item" routerLinkActive="active"
-          *ngIf="isLoggedIn && (role == 'customer' || role == 'admin')">
+        <li routerLinkActive="active" *ngIf="isLoggedIn && (role == 'customer' || role == 'admin')">
           <a routerLink="/tracker" class="nav_menu_link">Tracker</a>
         </li>
-        <li class="nav_menu_item" *ngIf="isLoggedIn" style="cursor: pointer">
+        <li *ngIf="isLoggedIn" style="cursor: pointer">
           <a (click)="signOut()" class="nav_menu_link">LogOut</a>
         </li>
-        <li class="nav_menu_item" routerLinkActive="active" *ngIf="!isLoggedIn">
+
+        <li routerLinkActive="active" *ngIf="!isLoggedIn">
           <a routerLink="/signin" class="nav_menu_link">SignIn</a>
         </li>
-        <li class="nav_menu_item" routerLinkActive="active" *ngIf="!isLoggedIn">
+        <li routerLinkActive="active" *ngIf="!isLoggedIn">
           <a routerLink="/signup" class="nav_menu_link">SignUp</a>
         </li>
-        <li class="nav_menu_item" *ngIf="isLoggedIn">
-          <p class="toggle_btn">
-            {{ getUserName() }}
-          </p>
-        </li>
       </ul>
-    </div>
-  </nav>
-  <hr />
-</header>
-<router-outlet></router-outlet>
-<!-- <footer class="footer bg-light  mt-5 p-4">
-  <div class="container text-center">
-    <p class="m-0">GOZEM API</p>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <a class="btn-getstarted" *ngIf="isLoggedIn">{{ getUserName() }}</a>
+
   </div>
-</footer> -->
+</header>
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
+<footer id="footer" class="footer position-relative">
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Gozem</strong> <span>All Rights Reserved</span></p>
+
+  </div>
+</footer>
