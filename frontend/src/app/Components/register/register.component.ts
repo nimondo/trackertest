@@ -71,7 +71,6 @@ export class RegisterComponent {
         password: this.password?.value,
         role: this.role?.value,
       };
-      console.log(user);
       this.userService.Create(user).subscribe(() => {
         this._snackBar.open('Your account has been created successfully', '✔️');
         setTimeout(() => (window.location.href = '/signin'), 2000);
