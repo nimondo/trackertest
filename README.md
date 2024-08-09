@@ -49,6 +49,7 @@ Clone the repository :
 cd to the directory:
 
     $ cd trackertest
+    $ cd server
 
 Install libraries :
 
@@ -68,3 +69,5 @@ start the project:
 
 In the "backend" folder rename the file ".env.example" to ".env" and fill in the missing data inside.
 Api docs urls http://localhost:3000/api-docs
+Backend url https://gozemapitest-8465f46d07ae.herokuapp.com/
+Frontend url https://gozemfront-4ba1d20b30bf.herokuapp.com/

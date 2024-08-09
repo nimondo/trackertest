@@ -36,7 +36,7 @@ const errorHandler = (error) => {
 };
 
 const server = http.createServer(app);
-require("./socket")(server); // Modularisation de la configuration Socket.io
+require("./event/socket")(server); // Modularisation de la configuration Socket.io
 
 server.on("error", errorHandler);
 server.on("listening", () => {
