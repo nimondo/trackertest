@@ -17,6 +17,7 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
+  errorMessage: string = '';
   constructor(
     private userService: UserService,
     private _snackBar: MatSnackBar
@@ -71,9 +72,17 @@ export class RegisterComponent {
         password: this.password?.value,
         role: this.role?.value,
       };
-      this.userService.Create(user).subscribe(() => {
+      this.userService.Create(user).subscribe({
+        next: (res:any) => {
+        console.log(res)
         this._snackBar.open('Your account has been created successfully', '✔️');
         setTimeout(() => (window.location.href = '/signin'), 2000);
+        this.errorMessage = "";
+        },
+        error: (err) => {
+          console.log('error');
+          this.errorMessage = err.message;
+        }
       });
     } else {
       console.log(this.form);
