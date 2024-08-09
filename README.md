@@ -68,5 +68,5 @@ start the project:
     $ npm start
 
 In the "backend" folder rename the file ".env.example" to ".env" and fill in the missing data inside.
-Api docs urls https://gozemapitest-8465f46d07ae.herokuapp.com/api-docs
-Frontend url https://gozemfront-4ba1d20b30bf.herokuapp.com/
+- Api docs urls https://gozemapitest-8465f46d07ae.herokuapp.com/api-docs
+- Frontend url https://gozemfront-4ba1d20b30bf.herokuapp.com/
