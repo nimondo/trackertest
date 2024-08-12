@@ -98,9 +98,9 @@ export class DriverComponent implements OnInit, OnDestroy {
       position: marker.position,
       label: {
         color: marker.color,
-        text: 'Marker label ' + (index + 1),
+        text: marker.name ||'Marker label ' + (index + 1),
       },
-      title: 'Marker title ' + (index + 1),
+      title: marker.name ||'Marker title ' + (index + 1),
       options: {
         animation: google.maps.Animation.BOUNCE,
       },
@@ -111,35 +111,11 @@ export class DriverComponent implements OnInit, OnDestroy {
   onSubmit(): void {
     this.deliveryService.get(this.search?.value).subscribe({
       next: (res) => {
+        console.log("res", res)
         this.packages = res?.package_id;
         this.delivery = res;
 
-        const lat = parseFloat(this.delivery?.location?.lat);
-        const lng = parseFloat(this.delivery?.location?.long);
-        this.markerData = [
-          {
-            position: new google.maps.LatLng({ lat, lng }),
-            color: 'blue',
-            icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-          },
-        ];
-
-        this.packages.forEach((packageData: any) => {
-          const fromLat = Number(packageData?.from_location?.lat);
-          const fromLng = Number(packageData?.from_location?.long);
-          const toLat = Number(packageData.to_location?.lat);
-          const toLng = Number(packageData?.to_location?.long);
-
-          this.markerData.push({
-            position: { lat: fromLat, lng: fromLng },
-            color: 'red',
-          });
-          this.markerData.push({
-            position: { lat: toLat, lng: toLng },
-            color: 'red',
-          });
-        });
-        this.addMarker(this.markerData);
+        this.updateMap();
         this.errorMessage = '';
         
       },
@@ -151,7 +127,36 @@ export class DriverComponent implements OnInit, OnDestroy {
       },
     });
   }
+  updateMap(){
+    const lat = parseFloat(this.delivery?.location?.lat);
+    const lng = parseFloat(this.delivery?.location?.long);
+    this.markerData = [
+      {
+        position: new google.maps.LatLng({ lat, lng }),
+        color: 'blue',
+        icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+      },
+    ];
 
+    this.packages.forEach((packageData: any) => {
+      const fromLat = Number(packageData?.from_location?.lat);
+      const fromLng = Number(packageData?.from_location?.long);
+      const toLat = Number(packageData.to_location?.lat);
+      const toLng = Number(packageData?.to_location?.long);
+
+      this.markerData.push({
+        position: { lat: fromLat, lng: fromLng },
+        color: 'red',
+        name: packageData?.from_name
+      });
+      this.markerData.push({
+        position: { lat: toLat, lng: toLng },
+        color: 'red',
+        name: packageData?.to_name
+      });
+    });
+    this.addMarker(this.markerData);
+  }
   onPickedUp(id: string): void {
     this.updateStatus(id, "status_changed", {status:'picked-up', pickup_time: new Date() });
   }
@@ -236,6 +241,7 @@ export class DriverComponent implements OnInit, OnDestroy {
           next: (res) => {
             this.packages = res?.package_id;
             this.delivery = res;
+            this.updateMap();
           },
         });
       });

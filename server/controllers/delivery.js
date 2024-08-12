@@ -10,8 +10,8 @@ exports.getAllDeliveries = handleAsync(async (req, res) => {
   const token = req.headers.authorization.split(" ")[1];
   let decodedToken = JwtUtils.decodeToken(token);
   let filter = {};
-  if (decodedToken.token != "admin")
-    filter.userId = decodedToken.userId;
+  if (decodedToken.data.role != "admin")
+    filter.userId = decodedToken.data.userId;
 
   const pageNumber = parseInt(req.query.page, 10) || 0;
   const limit = parseInt(req.query.limit, 10) || 12;

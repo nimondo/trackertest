@@ -60,9 +60,9 @@ export class TrackerComponent {
         position: marker.position,
         label: {
           color: marker.color,
-          text: 'Marker label ' + (this.markers.length + 1),
+          text: marker.name ||'Marker label ' + (this.markers.length + 1),
         },
-        title: 'Marker title ' + (this.markers.length + 1),
+        title: marker.name ||'Marker title ' + (this.markers.length + 1),
         options: {
           animation: google.maps.Animation.BOUNCE,
         },
@@ -126,6 +126,7 @@ export class TrackerComponent {
             lng: Number(this.package?.from_location?.long),
           },
           color: 'red',
+          name: this.package?.from_name
         });
         this.markerdata.push({
           position: {
@@ -133,6 +134,7 @@ export class TrackerComponent {
             lng: Number(this.package?.to_location?.long),
           },
           color: 'red',
+          name: this.package?.to_name
         });
         this.addMarker(this.markerdata);
       },
@@ -156,6 +158,7 @@ export class TrackerComponent {
         lng: Number(this.package?.from_location?.long),
       },
       color: 'red',
+      name: this.package?.from_name
     });
     this.markerdata.push({
       position: {
@@ -163,6 +166,7 @@ export class TrackerComponent {
         lng: Number(this.package?.to_location?.long),
       },
       color: 'red',
+      name: this.package?.to_name
     });
     this.addMarker(this.markerdata);
   }
@@ -175,7 +179,6 @@ export class TrackerComponent {
   onSubmit() {
     this.packageService.get(this.search?.value).subscribe({
       next: (res) => {
-        console.log("res data", res.packageData);
         this.package = res.packageData;
         this.delivery = res.packageData?.active_delivery_id;
         this.markerdata = [
@@ -194,6 +197,7 @@ export class TrackerComponent {
             lng: Number(this.package?.from_location?.long),
           },
           color: 'red',
+          name: this.package?.from_name
         });
         this.markerdata.push({
           position: {
@@ -201,6 +205,7 @@ export class TrackerComponent {
             lng: Number(this.package?.to_location?.long),
           },
           color: 'red',
+          name: this.package?.to_name
         });
         this.addMarker(this.markerdata);
         this.errorMessage = '';
