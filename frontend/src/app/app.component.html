@@ -8,26 +8,26 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li *ngIf="isLoggedIn" routerLinkActive="active">
-          <a routerLink="/user" class="nav_menu_link">User</a>
+          <a routerLink="/user" class="nav_menu_link" (click)="hideMenu()">User</a>
         </li>
         <li routerLinkActive="active" *ngIf="isLoggedIn && (role=='driver' || role=='admin' )">
-          <a routerLink="/driver" class="nav_menu_link">Driver</a>
+          <a routerLink="/driver" class="nav_menu_link" (click)="hideMenu()">Driver</a>
         </li>
         <li routerLinkActive="active" *ngIf="isLoggedIn && (role == 'driver' || role == 'admin'|| role=='customer')">
-          <a routerLink="/admin" class="nav_menu_link">Admin</a>
+          <a routerLink="/admin" class="nav_menu_link" (click)="hideMenu()">Admin</a>
         </li>
         <li routerLinkActive="active" *ngIf="isLoggedIn && (role == 'customer' || role == 'admin')">
-          <a routerLink="/tracker" class="nav_menu_link">Tracker</a>
+          <a routerLink="/tracker" class="nav_menu_link" (click)="hideMenu()">Tracker</a>
         </li>
         <li *ngIf="isLoggedIn" style="cursor: pointer">
-          <a (click)="signOut()" class="nav_menu_link">LogOut</a>
+          <a (click)="signOut()" class="nav_menu_link" (click)="hideMenu()">LogOut</a>
         </li>
 
         <li routerLinkActive="active" *ngIf="!isLoggedIn">
-          <a routerLink="/signin" class="nav_menu_link">SignIn</a>
+          <a routerLink="/signin" class="nav_menu_link" (click)="hideMenu()">SignIn</a>
         </li>
         <li routerLinkActive="active" *ngIf="!isLoggedIn">
-          <a routerLink="/signup" class="nav_menu_link">SignUp</a>
+          <a routerLink="/signup" class="nav_menu_link" (click)="hideMenu()">SignUp</a>
         </li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
