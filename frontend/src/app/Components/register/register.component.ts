@@ -80,8 +80,9 @@ export class RegisterComponent {
         this.errorMessage = "";
         },
         error: (err) => {
-          console.log('error');
-          this.errorMessage = err.message;
+          console.log('error', err.error.error);
+          this.errorMessage = err.error.error;
+          this._snackBar.open(this.errorMessage, '❌');
         }
       });
     } else {

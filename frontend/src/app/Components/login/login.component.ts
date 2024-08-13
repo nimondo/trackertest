@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from 'src/app/Services/user.service';
-import { AuthService } from 'src/app/Services/auth.service';
+
 import { ErrorsStateMatcher } from 'src/app/Error-state-matcher';
+import { AuthService } from 'src/app/Services/auth.service';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -61,8 +66,8 @@ export class LoginComponent {
           this.isLoginFailed = false;
           window.location.reload();
         },
-        error: (err: Error) => {
-          this.errorMessage = err.message;
+        error: (err: any) => {
+          this.errorMessage = err.error.error;
           this.isLoginFailed = true;
           this._snackBar.open(this.errorMessage, '❌');
         },
