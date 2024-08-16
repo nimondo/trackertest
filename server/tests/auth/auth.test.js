@@ -23,7 +23,7 @@ describe('Auth Controller', () => {
         User.mockImplementation(() => ({
             save: jest.fn().mockResolvedValue({
                 _id: uuid.v4(),
-                email: 'test@example.com',
+                email: 'test@testify.com',
                 role: 'admin'
             }),
         }));

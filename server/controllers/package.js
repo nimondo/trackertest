@@ -2,6 +2,7 @@ const Package = require("../models/package");
 const logger = require("../logger");
 const handleAsync = require("../utils/handleAsync");
 const JwtUtils = require("../utils/jwtUtils");
+const customer = "customer";
 const {
   v4: uuidv4
 } = require("uuid");
@@ -37,10 +38,9 @@ exports.getAllPackages = handleAsync(async (req, res) => {
   const token = req.headers.authorization.split(" ")[1];
   let decodedToken = JwtUtils.decodeToken(token);
   let filter = {};
-  if (decodedToken.data.role != "admin")
+  if (decodedToken.data.role == customer)
     filter.userId = decodedToken.data.userId;
 
-  console.log("filter", filter)
   const pageNumber = parseInt(req.query.page, 10) || 0;
   const limit = parseInt(req.query.limit, 10) || 12;
   const startIndex = pageNumber * limit;
