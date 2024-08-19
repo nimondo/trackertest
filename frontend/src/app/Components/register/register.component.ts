@@ -74,7 +74,6 @@ export class RegisterComponent {
       };
       this.userService.Create(user).subscribe({
         next: (res:any) => {
-        console.log(res)
         this._snackBar.open('Your account has been created successfully', '✔️');
         setTimeout(() => (window.location.href = '/signin'), 2000);
         this.errorMessage = "";

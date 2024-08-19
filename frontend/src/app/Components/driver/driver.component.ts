@@ -13,6 +13,7 @@ import {
   MapInfoWindow,
   MapMarker,
 } from '@angular/google-maps';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Socket } from 'ngx-socket-io';
 import {
@@ -22,6 +23,13 @@ import {
 import { debounceTime } from 'rxjs/operators';
 import { DeliveryService } from 'src/app/Services/delivery.service';
 
+enum DeliveryStatus {
+  Open = "open",
+  PickedUp = "picked-up",
+  InTransit = "in-transit",
+  Delivered = "delivered",
+  Failed = "failed"
+}
 @Component({
   selector: 'app-driver',
   templateUrl: './driver.component.html',
@@ -64,7 +72,8 @@ export class DriverComponent implements OnInit, OnDestroy {
 
   constructor(
     private deliveryService: DeliveryService,
-    private socket: Socket
+    private socket: Socket,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -158,25 +167,33 @@ export class DriverComponent implements OnInit, OnDestroy {
     this.addMarker(this.markerData);
   }
   onPickedUp(id: string): void {
-    this.updateStatus(id, "status_changed", {status:'picked-up', pickup_time: new Date() });
+    
+      this.updateStatus(id, "status_changed", {status:DeliveryStatus.PickedUp, pickup_time: new Date() }, DeliveryStatus.Open);
   }
 
   onInTransit(id: string): void {
-    this.updateStatus(id, "status_changed",  { status:'in-transit',start_time: new Date() });
+    
+    this.updateStatus(id, "status_changed",  { status:DeliveryStatus.InTransit,start_time: new Date() }, DeliveryStatus.PickedUp);
   }
 
+
   onDelivered(id: string): void {
-    this.updateStatus(id, "status_changed",  {status:'delivered', end_time: new Date() });
+    this.updateStatus(id, "status_changed",  {status:DeliveryStatus.Delivered, end_time: new Date() }, DeliveryStatus.InTransit);
   }
 
   onFailed(id: string): void {
-    this.updateStatus(id, "status_changed", { status:'failed',start_time: new Date() });
+    this.updateStatus(id, "status_changed", { status:DeliveryStatus.Failed,start_time: new Date() }, DeliveryStatus.InTransit);
   }
 
-  private updateStatus(id: string, operation: string, additionalData: any): void {
+  private updateStatus(id: string, operation: string, additionalData: any, requiredStatus:any =null): void {
     const data = {  ...additionalData };
+    if (this.delivery.status !== requiredStatus) {
+      this._snackBar.open("You can't update the status!", '❌');
+      return;
+    } 
     this.deliveryService.Update(id, data).subscribe({
       next: (res) => {
+        this._snackBar.open("Update done successfully", '✔️');
         if (operation == 'location_changed') {
           this.socket.emit('location_changed', { id: id, ...data });
           this.socket.on('delivery_updated', (data: any) => {
