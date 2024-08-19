@@ -2,7 +2,13 @@ const mongoose = require("mongoose");
 const {
   v4: uuidv4
 } = require("uuid");
-
+export const deliveryStatus = {
+  OPEN: "open",
+  PICKED_UP: "picked-up",
+  IN_TRANSIT: "in-transit",
+  DELIVERED: "delivered",
+  FAILED: "failed",
+};
 const deliverySchema = new mongoose.Schema({
   _id: {
     type: String,
@@ -42,7 +48,8 @@ const deliverySchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["open", "picked-up", "in-transit", "delivered", "failed"],
+    enum: [deliveryStatus.OPEN, deliveryStatus.PICKED_UP, deliveryStatus.FAILED, deliveryStatus.IN_TRANSIT, deliveryStatus.DELIVERED],
+    default: deliveryStatus.OPEN,
     required: true,
   },
 }, {
