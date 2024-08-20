@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const {
   v4: uuidv4
 } = require("uuid");
-export const deliveryStatus = {
+const deliveryStatus = {
   OPEN: "open",
   PICKED_UP: "picked-up",
   IN_TRANSIT: "in-transit",
