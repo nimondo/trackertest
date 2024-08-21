@@ -112,7 +112,7 @@ const packageSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-// Custom validation functions
+// Custom validation function
 packageSchema.path('weight').validate(function (value) {
   return value > 0;
 }, 'Weight must be greater than zero');
