@@ -128,9 +128,15 @@ export class PackageComponent {
         userId: this.userId,
       };
       console.log('package', packageData);
-      this.packageService.Create(packageData).subscribe(() => {
-        this._snackBar.open('Your package has been created successfully', '✔️');
-        setTimeout(() => (window.location.href = '/admin'), 2000);
+      this.packageService.Create(packageData).subscribe({
+        next: () => {
+          this._snackBar.open('Your package has been created successfully', '✔️');
+          setTimeout(() => (window.location.href = '/admin'), 2000);
+        },
+        error: (err: any) => {
+          console.log("error", err, err.error)
+          this._snackBar.open(err.error.error, '❌');
+        } 
       });
     } else {
       console.log(this.form);

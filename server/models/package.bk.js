@@ -112,9 +112,21 @@ const packageSchema = new mongoose.Schema({
     timestamps: true,
 });
 
-// Custom validation function example
+// Custom validation functions
 packageSchema.path('weight').validate(function (value) {
     return value > 0;
 }, 'Weight must be greater than zero');
+
+packageSchema.path('width').validate(function (value) {
+    return value > 0;
+}, 'Width must be greater than zero');
+
+packageSchema.path('height').validate(function (value) {
+    return value > 0;
+}, 'Height must be greater than zero');
+
+packageSchema.path('depth').validate(function (value) {
+    return value > 0;
+}, 'Depth must be greater than zero');
 
 module.exports = mongoose.model("Package", packageSchema);
