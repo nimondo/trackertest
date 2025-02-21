@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const SALT_WORK_FACTOR = 10;
 const MAX_LOGIN_ATTEMPTS = 5;
@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+    select: false,  // Empêche d'envoyer le password par défaut dans les requêtes
   },
   role: {
     type: String,
@@ -30,7 +31,6 @@ const userSchema = new mongoose.Schema({
   },
   loginAttempts: {
     type: Number,
-    required: true,
     default: 0,
   },
   lockUntil: {
@@ -46,7 +46,7 @@ userSchema.virtual("isLocked").get(function () {
   return !!(this.lockUntil && this.lockUntil > Date.now());
 });
 
-// Hachage du mot de passe avant sauvegarde
+// 🔒 **Hachage du mot de passe avant sauvegarde**
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
@@ -59,7 +59,7 @@ userSchema.pre("save", async function (next) {
   }
 });
 
-// Hachage du mot de passe avant mise à jour
+// 🔒 **Hachage du mot de passe avant mise à jour**
 userSchema.pre("findOneAndUpdate", async function (next) {
   const update = this.getUpdate();
   if (update.password) {
@@ -74,13 +74,13 @@ userSchema.pre("findOneAndUpdate", async function (next) {
   next();
 });
 
-// Comparaison du mot de passe
+// 🔄 **Comparaison du mot de passe**
 userSchema.methods.comparePassword = function (candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-// Incrémentation des tentatives de connexion
-userSchema.methods.incLoginAttempts = function () {
+// 🔄 **Incrémentation des tentatives de connexion**
+userSchema.methods.incLoginAttempts = async function () {
   if (this.lockUntil && this.lockUntil < Date.now()) {
     return this.updateOne({
       $set: { loginAttempts: 1 },
@@ -96,7 +96,7 @@ userSchema.methods.incLoginAttempts = function () {
   return this.updateOne(updates).exec();
 };
 
-// Enum pour les raisons d'échec de connexion
+// 📌 **Enum pour les raisons d'échec de connexion**
 const reasons = {
   NOT_FOUND: 0,
   INACTIVE: 1,
@@ -104,6 +104,7 @@ const reasons = {
   MAX_ATTEMPTS: 3,
 };
 
+// 📌 **Retourne un message d'erreur approprié**
 userSchema.statics.reasonMessage = function (reason) {
   switch (reason) {
     case reasons.NOT_FOUND:
@@ -118,29 +119,36 @@ userSchema.statics.reasonMessage = function (reason) {
   }
 };
 
-// Authentification utilisateur
+// 🔑 **Authentification utilisateur**
 userSchema.statics.getAuthenticated = async function (email, password) {
-  const user = await this.findOne({ email });
+  try {
+    const user = await this.findOne({ email }).select("+password").lean(); // Sécurisé et optimisé
 
-  if (!user) return { user: null, reason: reasons.NOT_FOUND };
-  if (user.isLocked) {
-    await user.incLoginAttempts();
-    return { user: null, reason: reasons.MAX_ATTEMPTS };
+    if (!user) return { user: null, reason: reasons.NOT_FOUND };
+    if (user.isLocked) {
+      await this.findByIdAndUpdate(user._id, { $inc: { loginAttempts: 1 } });
+      return { user: null, reason: reasons.MAX_ATTEMPTS };
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (isMatch) {
+      await this.findByIdAndUpdate(user._id, { 
+        $set: { loginAttempts: 0, lastLogin: new Date() }, 
+        $unset: { lockUntil: 1 } 
+      });
+
+      return { user };
+    }
+
+    await this.findByIdAndUpdate(user._id, { $inc: { loginAttempts: 1 } });
+    return { user: null, reason: reasons.PASSWORD_INCORRECT };
+  } catch (error) {
+    console.error("Authentication error:", error);
+    return { user: null, reason: "INTERNAL_ERROR" };
   }
-
-  const isMatch = await user.comparePassword(password);
-  if (isMatch) {
-    await user.updateOne({ 
-      $set: { loginAttempts: 0, lastLogin: new Date() }, 
-      $unset: { lockUntil: 1 } 
-    }).exec();
-    return { user };
-  }
-
-  await user.incLoginAttempts();
-  return { user: null, reason: reasons.PASSWORD_INCORRECT };
 };
 
+// 🔍 **Ajout du plugin uniqueValidator**
 userSchema.plugin(uniqueValidator);
 
 module.exports = {
